@@ -12,6 +12,13 @@ public class MeleeEnemyAI : MonoBehaviour
     public float fovAngle = 60f;
     public float patrolRadius = 10f;
     public Vector3 offset = new Vector3(1f, 0, 1f);
+    public float rotationSpeed = 30f; // Degrees per second
+    private float rotationTimer = 0f;
+    public float rotationDuration = 3f;
+    private Vector3 lastPosition;
+    private float stationaryTimeThreshold = 3f;
+    private float timeSinceLastMove;
+
 
     private enum State
     {
@@ -29,6 +36,9 @@ public class MeleeEnemyAI : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        lastPosition = transform.position;
+        timeSinceLastMove = 0f;
+
         state = State.Idle;
     }
 
@@ -42,6 +52,7 @@ public class MeleeEnemyAI : MonoBehaviour
             case State.Patrol:
                 animator.SetBool("isWalking",true);
                 Patrol();
+                CheckIfStuck();
                 break;
             case State.Chase:
                 ChasePlayer();
@@ -51,8 +62,47 @@ public class MeleeEnemyAI : MonoBehaviour
                 AttackPlayer();
                 break;
         }
-       
     }
+
+    private void CheckIfStuck()
+    {
+        // Check if the AI has moved since the last frame
+        if (Vector3.Distance(transform.position, lastPosition) > 0.1f) // Use a small threshold to account for minor movements
+        {
+            // The AI has moved, reset the timer
+            timeSinceLastMove = 0f;
+        }
+        else
+        {
+            // The AI hasn't moved, increment the timer
+            timeSinceLastMove += Time.deltaTime;
+
+            // If the AI has been stationary for longer than the threshold, change the destination
+            if (timeSinceLastMove > stationaryTimeThreshold)
+            {
+                timeSinceLastMove = 0f;
+                ChangePatrolDestination();
+            }
+        }
+
+        // Update the last position for the next frame
+        lastPosition = transform.position;
+    }
+
+    private void ChangePatrolDestination()
+    {
+        // Your logic to change the patrol destination goes here
+        // Similar to what's in your Patrol() method when the agent.remainingDistance < 1f
+        Vector3 randomDirection = Random.insideUnitSphere * patrolRadius;
+        randomDirection += transform.position;
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomDirection, out hit, patrolRadius, 1))
+        {
+            Vector3 newPatrolPosition = hit.position;
+            agent.SetDestination(newPatrolPosition);
+        }
+    }
+
 
     private void Idle()
     {
@@ -65,6 +115,8 @@ public class MeleeEnemyAI : MonoBehaviour
         state = State.Patrol;
     }
 
+
+
     private void Patrol()
     {
         if (agent.remainingDistance < 1f)
@@ -76,6 +128,9 @@ public class MeleeEnemyAI : MonoBehaviour
             Vector3 patrolPosition = hit.position;
 
             agent.SetDestination(patrolPosition);
+        
+            // Reset rotation timer when a new destination is set
+            rotationTimer = 0f;
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
@@ -83,7 +138,30 @@ public class MeleeEnemyAI : MonoBehaviour
         {
             state = State.Chase;
         }
+        else
+        {
+            // Rotate the enemy while patrolling
+            RotateWhilePatrolling();
+        }
     }
+
+    private void RotateWhilePatrolling()
+    {
+        // Increment timer
+        rotationTimer += Time.deltaTime;
+
+        // Rotate for a certain duration
+        if (rotationTimer <= rotationDuration)
+        {
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        }
+        else if (rotationTimer > rotationDuration * 2) // Wait for double the duration before resetting
+        {
+            // Reset timer after rotation has completed and a pause has elapsed
+            rotationTimer = 0f;
+        }
+    }
+
 
     private void ChasePlayer()
     {

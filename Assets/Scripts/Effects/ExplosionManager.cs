@@ -1,4 +1,5 @@
 using DefaultNamespace.ObjectPooling;
+using DG.Tweening;
 using UnityEngine;
 using Util;
 
@@ -15,6 +16,7 @@ namespace Effects
         public void SpawnExplosion(Vector3 position, Quaternion rotation)
         {
             var spawnedExplosion = ObjectPoolManager.SpawnObject(explosionPrefab, position, rotation);
+            spawnedExplosion.transform.DOScale(spawnedExplosion.transform.localScale * 3f, 0.5f).SetEase(Ease.OutExpo);
             Destroy(spawnedExplosion,explosionDuration);
             
         }
