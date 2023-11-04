@@ -1,5 +1,6 @@
 using DefaultNamespace.ObjectPooling;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Stats
 {
@@ -9,12 +10,16 @@ namespace Stats
     {
         // Attributes
         [SerializeField]private float HP = 100f;
-        [SerializeField]private float Attack= 10f;
+        [SerializeField]public float Attack= 10f;
         [SerializeField]private float Speed  = 5f;
+        
+        
+        public UnityEvent OnDamageTaken;
 
         // Method to take damage
         public void TakeDamage(float damageAmount)
         {
+            OnDamageTaken?.Invoke();
             HP -= damageAmount;
 
             // Ensure HP doesn't go below 0

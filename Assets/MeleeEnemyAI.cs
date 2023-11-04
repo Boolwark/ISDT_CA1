@@ -1,9 +1,13 @@
+
+using Stats;
 using UnityEngine;
 using UnityEngine.AI;
-
+/// <summary>
+/// This Enemy AI chases both the player and NPC characters. (Tagged with Player and NPC respectively)
+/// </summary>
 public class MeleeEnemyAI : MonoBehaviour
 {
-    public Transform player;
+    private Transform target;
     private NavMeshAgent agent;
     private Animator animator;
 
@@ -18,6 +22,7 @@ public class MeleeEnemyAI : MonoBehaviour
     private Vector3 lastPosition;
     private float stationaryTimeThreshold = 3f;
     private float timeSinceLastMove;
+    private StatsManager _statsManager;
 
 
     private enum State
@@ -34,7 +39,7 @@ public class MeleeEnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        _statsManager = GetComponent<StatsManager>();
 
         lastPosition = transform.position;
         timeSinceLastMove = 0f;
@@ -50,20 +55,111 @@ public class MeleeEnemyAI : MonoBehaviour
                 Idle();
                 break;
             case State.Patrol:
-                animator.SetBool("isWalking",true);
+                animator.SetBool("isWalking", true);
                 Patrol();
                 CheckIfStuck();
                 break;
             case State.Chase:
-                ChasePlayer();
-                animator.SetBool("isWalking",true);
+                ChaseTarget();
+                animator.SetBool("isWalking", true);
                 break;
             case State.Attack:
-                AttackPlayer();
+                AttackTarget();
                 break;
         }
     }
+     private void ChaseTarget()
+    {
+        if (target != null)
+        {
+            Vector3 chasePosition = target.position - offset;
+            agent.SetDestination(chasePosition);
+            FaceTarget(target);
 
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+            if (distanceToTarget <= attackRange)
+            {
+                state = State.Attack;
+            }
+            else if (distanceToTarget > chaseRange || !IsTargetInFOV(target))
+            {
+                state = State.Patrol;
+            }
+        }
+        else
+        {
+            state = State.Patrol;
+        }
+    }
+
+    private void AttackTarget()
+    {
+        if (target != null)
+        {
+            agent.ResetPath();
+            animator.SetTrigger("attack");
+
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+            if (distanceToTarget > attackRange)
+            {
+                state = State.Chase;
+            }
+            else
+            {
+                if (target.TryGetComponent(out StatsManager targetStatsManager))
+                {
+                    print(transform.name + "Is attacking" + target.name);
+                    targetStatsManager.TakeDamage(_statsManager.Attack);
+                }
+            }
+        }
+        else
+        {
+            state = State.Patrol;
+        }
+    }
+
+    private void FaceTarget(Transform target)
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    private bool IsTargetInFOV(Transform target)
+    {
+        if (target==null) return false;
+        Vector3 directionToTarget = (target.position - transform.position).normalized;
+        float angleBetweenEnemyAndTarget = Vector3.Angle(transform.forward, directionToTarget);
+
+        return angleBetweenEnemyAndTarget < fovAngle / 2f;
+    }
+
+    private void FindTargets()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, chaseRange);
+        Transform closestTarget = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.CompareTag("NPC") || hitCollider.CompareTag("Player"))
+            {
+                float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+                if (distance < closestDistance && IsTargetInFOV(hitCollider.transform))
+                {
+                    closestDistance = distance;
+                    closestTarget = hitCollider.transform;
+                }
+            }
+        }
+
+        target = closestTarget;
+        if (target != null)
+        {
+            state = State.Chase;
+        }
+    }
     private void CheckIfStuck()
     {
         // Check if the AI has moved since the last frame
@@ -133,8 +229,8 @@ public class MeleeEnemyAI : MonoBehaviour
             rotationTimer = 0f;
         }
 
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= chaseRange && IsPlayerInFOV())
+        float distanceToPlayer = Vector3.Distance(transform.position, transform.position);
+        if (distanceToPlayer <= chaseRange && IsTargetInFOV(target))
         {
             state = State.Chase;
         }
@@ -143,6 +239,7 @@ public class MeleeEnemyAI : MonoBehaviour
             // Rotate the enemy while patrolling
             RotateWhilePatrolling();
         }
+        FindTargets();
     }
 
     private void RotateWhilePatrolling()
@@ -161,49 +258,6 @@ public class MeleeEnemyAI : MonoBehaviour
             rotationTimer = 0f;
         }
     }
+    
 
-
-    private void ChasePlayer()
-    {
-        Vector3 chasePosition = player.position - offset;
-        agent.SetDestination(chasePosition);
-        FacePlayer();
-
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer <= attackRange)
-        {
-            state = State.Attack;
-        }
-        else if (distanceToPlayer > chaseRange || !IsPlayerInFOV())
-        {
-            state = State.Patrol;
-        }
-    }
-
-    private void AttackPlayer()
-    {
-        agent.ResetPath();
-        animator.SetTrigger("attack");
-
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer > attackRange)
-        {
-            state = State.Chase;
-        }
-    }
-
-    private void FacePlayer()
-    {
-        Vector3 direction = (player.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-    }
-
-    private bool IsPlayerInFOV()
-    {
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
-        float angleBetweenEnemyAndPlayer = Vector3.Angle(transform.forward, directionToPlayer);
-
-        return angleBetweenEnemyAndPlayer < fovAngle / 2f;
-    }
 }

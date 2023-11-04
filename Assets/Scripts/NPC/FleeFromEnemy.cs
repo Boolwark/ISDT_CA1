@@ -45,8 +45,8 @@ public class FleeFromEnemy : MonoBehaviour
             Vector3 fleeDirection = transform.position - enemyTransform.position;
             Vector3 newFleePosition = transform.position + fleeDirection.normalized * fleeDistance;
 
-            // Check for obstacles in the flee direction
-            if (Physics.Raycast(transform.position, fleeDirection.normalized, obstacleCheckDistance))
+            // Advanced Raycasting for obstacle detection
+            if (IsObstacleInFleeDirection(fleeDirection))
             {
                 // If an obstacle is detected, find a new flee direction
                 fleeDirection = FindNewFleeDirection();
@@ -63,6 +63,22 @@ public class FleeFromEnemy : MonoBehaviour
             agent.SetDestination(hit.position);
         }
     }
+
+    bool IsObstacleInFleeDirection(Vector3 direction)
+    {
+        // Perform multiple raycasts in a fan-like spread
+        float angleStep = 15f; // Angle step for raycasts
+        for (float angle = -45f; angle <= 45f; angle += angleStep)
+        {
+            Vector3 rayDirection = Quaternion.Euler(0, angle, 0) * direction.normalized;
+            if (Physics.Raycast(transform.position, rayDirection, obstacleCheckDistance))
+            {
+                return true; // Obstacle detected
+            }
+        }
+        return false; // No obstacles detected
+    }
+
 
 
     Vector3 FindNewFleeDirection()
