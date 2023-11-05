@@ -7,7 +7,7 @@ namespace Weapons
     public class Bullet : MonoBehaviour
     {
         public float damage = 100f;
-        private void OnCollisionEnter(Collision collision)
+        protected virtual void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.CompareTag("Enemy") &&
                 collision.collider.TryGetComponent(out StatsManager statsManager))
