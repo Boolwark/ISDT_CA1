@@ -15,6 +15,7 @@ namespace Weapons.Sword
         public Material crossSectionMaterial;
         public LayerMask sliceableLayer;
         public float cutForce = 5f;
+        private Rigidbody playerRB;
 
         public AbilityHolder abilityHolder;
         public DashAbility dashAbility;
@@ -38,14 +39,21 @@ namespace Weapons.Sword
             if (!abilityHolder)
             {
                 abilityHolder = FindObjectOfType<AbilityHolder>();
+                playerRB = abilityHolder.transform.GetComponent<Rigidbody>();
                 oldAbility = abilityHolder.ability;
+             
+              
+           
             }
+            playerRB.isKinematic = true;
+            playerRB.velocity = Vector3.zero;
             abilityHolder.ability = dashAbility;
             
         }
         public void OnDeSelect()
         {
             abilityHolder.ability = oldAbility;
+            playerRB.isKinematic = false;
         }
 
         public void Slice(GameObject target)
