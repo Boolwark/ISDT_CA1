@@ -1,4 +1,6 @@
 using System;
+using Ability;
+using Ability.Abilities;
 using EzySlice;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,8 +15,10 @@ namespace Weapons.Sword
         public Material crossSectionMaterial;
         public LayerMask sliceableLayer;
         public float cutForce = 5f;
-        
 
+        public AbilityHolder abilityHolder;
+        public DashAbility dashAbility;
+        private Ability.Ability oldAbility;
         private void FixedUpdate()
         {
             bool hasHit = Physics.Linecast(startSlicePoint.position, endSlicePoint.position,out RaycastHit hit,sliceableLayer);
@@ -27,6 +31,21 @@ namespace Weapons.Sword
             
             
            
+        }
+
+        public void OnSelect()
+        {
+            if (!abilityHolder)
+            {
+                abilityHolder = FindObjectOfType<AbilityHolder>();
+                oldAbility = abilityHolder.ability;
+            }
+            abilityHolder.ability = dashAbility;
+            
+        }
+        public void OnDeSelect()
+        {
+            abilityHolder.ability = oldAbility;
         }
 
         public void Slice(GameObject target)

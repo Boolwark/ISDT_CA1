@@ -1,26 +1,47 @@
-using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
+using UnityEngine.VFX;
 using UnityEngine.XR.Interaction.Toolkit;
-namespace Weapons
+
+public class Gun : MonoBehaviour
 {
-    public class Gun : MonoBehaviour
+    public GameObject bullet;
+    public Transform spawnPoint;
+    public float fireSpeed = 20f;
+    public Canvas ammoDisplayCanvas;
+    public TMP_Text ammoDisplayText;
+    protected XRGrabInteractable grabbable;
+    public VisualEffect muzzleEffect;
+
+    protected virtual void Start()
     {
-        public GameObject bullet;
-        public Transform spawnPoint;
-        public float fireSpeed = 20f;
+        grabbable = GetComponent<XRGrabInteractable>();
+        grabbable.activated.AddListener(FireBullet);
+        grabbable.selectEntered.AddListener(ShowAmmoDisplay);
+        grabbable.selectExited.AddListener(HideAmmoDisplay);
+        ammoDisplayCanvas.gameObject.SetActive(false);
+    }
 
-        void Start()
-        {
-            XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
-            grabbable.activated.AddListener(FireBullet);
-        }
+    public virtual void FireBullet(ActivateEventArgs args)
+    {
+        GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        muzzleEffect.Play();
+        Destroy(spawnedBullet, 5);
+    }
 
-        public void FireBullet(ActivateEventArgs args)
-        {
-            GameObject spawnedBullet = Instantiate(bullet);
-            spawnedBullet.transform.position = spawnPoint.position;
-            spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-            Destroy(spawnedBullet,5);
-        }
+    protected void ShowAmmoDisplay(SelectEnterEventArgs args)
+    {
+        ammoDisplayCanvas.gameObject.SetActive(true);
+    }
+
+    protected void HideAmmoDisplay(SelectExitEventArgs args)
+    {
+        ammoDisplayCanvas.gameObject.SetActive(false);
+    }
+
+    protected virtual void UpdateAmmoDisplay()
+    {
+        // Override this method in derived classes to update ammo display text.
     }
 }
