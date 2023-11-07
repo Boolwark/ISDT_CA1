@@ -5,16 +5,29 @@ namespace UI
 {
     public class SettingsButton : MonoBehaviour
     {
-        public GameObject settingsPanel;
-
+        public Canvas settingsPanel;
+        private Vector3 initScale;
+        private bool isVisible;
         private void Start()
         {
-            settingsPanel.SetActive(false);
+            initScale = settingsPanel.transform.localScale;
+            settingsPanel.transform.localScale = Vector3.zero;
         }
 
         public void OnClick()
         {
-            settingsPanel.SetActive(!settingsPanel.activeSelf);
+            Debug.Log("Clicking settings panel button");
+            if (!isVisible)
+            {
+                settingsPanel.transform.localScale = initScale;
+            }
+            else
+            {
+                settingsPanel.transform.localScale = Vector3.zero;
+            }
+
+            isVisible = !isVisible;
+
         }
     }
 }
