@@ -26,6 +26,7 @@ public class DissolveController : MonoBehaviour
     {
         if (!isDissolving) // Only start the coroutine if it isn't already running
         {
+            AudioManager.Instance.PlaySFX("DissolveIn");
             StartCoroutine(FadeInEffect());
         }
     }

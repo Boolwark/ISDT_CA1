@@ -8,7 +8,7 @@ namespace Weapons
 
         void OnCollisionEnter(Collision collision)
         {
-            if (!collision.collider.CompareTag("Enemy") || !collision.collider.CompareTag("Wall")) return;
+            if (!collision.collider.CompareTag("Enemy") &&  !collision.collider.CompareTag("Wall")) return;
             Debug.Log("hit target");
 
             int bulletHolesIndex = Random.Range(0, bulletHoles.Length-1);
