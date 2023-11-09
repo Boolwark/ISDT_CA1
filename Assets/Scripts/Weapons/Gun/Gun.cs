@@ -27,6 +27,7 @@ public class Gun : MonoBehaviour
         GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         muzzleEffect.Play();
+        AudioManager.Instance.PlaySFX("GunShot");
         Destroy(spawnedBullet, 5);
     }
 
