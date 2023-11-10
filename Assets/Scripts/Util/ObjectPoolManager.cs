@@ -40,6 +40,7 @@ namespace DefaultNamespace.ObjectPooling
             if (pool == null)
             {
                 Debug.Log("Trying to release an object that was not pooled");
+                Destroy(obj);
             }
             else
             {
