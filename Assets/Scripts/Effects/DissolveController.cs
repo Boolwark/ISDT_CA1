@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DissolveController : MonoBehaviour
 {
+    private bool isVisible = false;
     public float dissolveSpeed = 1.0f; // Speed of the dissolve effect
     private Material dissolveMaterial;
     private bool isDissolving = false;
@@ -24,12 +25,15 @@ public class DissolveController : MonoBehaviour
     // Public method to start the dissolve effect
     public void StartFadingIn()
     {
-        if (!isDissolving) // Only start the coroutine if it isn't already running
+        if (!isDissolving && !isVisible) // Only start the coroutine if it isn't already running
         {
             AudioManager.Instance.PlaySFX("DissolveIn");
             StartCoroutine(FadeInEffect());
         }
+
+        isVisible = true;
     }
+    
 
     private IEnumerator FadeInEffect()
     {

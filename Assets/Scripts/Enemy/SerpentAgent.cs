@@ -5,12 +5,12 @@ namespace Enemy
 {
     public class SerpentAgent : MonoBehaviour
     {
-     
+        public MeleeEnemyAI meleeEnemyAI;
         private bool isFadingIn;
         public DissolveController[] dissolveControllers;
         private void Start()
         {
-         
+            meleeEnemyAI.enabled = false;
         }
         private void OnTriggerEnter(Collider other)
         {
@@ -22,8 +22,10 @@ namespace Enemy
                 {
                     dissolveController.StartFadingIn();
                 }
-             
             }
+
+            meleeEnemyAI.enabled = true;
+            Debug.Log(transform.name + "is now attacking player");
         }
     }
 }

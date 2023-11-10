@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: c48f5294d55c243fbbf45be70d089246, type: 2}
 --- !u!1 &103106604
 GameObject:
   m_ObjectHideFlags: 0
@@ -38786,7 +38786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204551311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.73, y: -0.94, z: -2.2545664}
+  m_LocalPosition: {x: -9.2, y: -0.94, z: -2.2545664}
   m_LocalScale: {x: 1, y: 8.2496, z: 2.8252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39156,7 +39156,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1347515898
 MeshCollider:
@@ -45786,7 +45786,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6f31c404d9b34186862304bbdc39089,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.4689207
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6f31c404d9b34186862304bbdc39089,
         type: 3}
@@ -45796,7 +45796,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6f31c404d9b34186862304bbdc39089,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.815264
+      value: -6.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6f31c404d9b34186862304bbdc39089,
         type: 3}
@@ -45843,6 +45843,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1abec5ca73b7a41ba8cbfe76c434dd9b, type: 2}
+    - target: {fileID: 5866666021909216657, guid: c6f31c404d9b34186862304bbdc39089,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b9e6440026f614844914c2e322f7d990, type: 2}
     - target: {fileID: 6148737315974723067, guid: c6f31c404d9b34186862304bbdc39089,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -45868,6 +45873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d48b63c85d46759eaf1e9ad23076a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meleeEnemyAI: {fileID: 1765021725}
   dissolveControllers:
   - {fileID: 226849199}
   - {fileID: 1624480482}
@@ -45890,6 +45896,65 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2188314
   m_Center: {x: 0, y: 0.7188315, z: 0}
+--- !u!195 &1765021724
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765021717}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1765021725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765021717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a334d48b5169f44e583f1573326bace1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseRange: 15
+  attackRange: 10
+  fovAngle: 360
+  patrolRadius: 3
+  offset: {x: 0.5, y: 0, z: 0.5}
+  rotationSpeed: 30
+  rotationDuration: 3
+--- !u!114 &1765021726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765021717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09894cab30c044a3ae1db3d93a1b8fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  Attack: 10
+  Speed: 5
+  OnDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1794146672
 GameObject:
   m_ObjectHideFlags: 0
