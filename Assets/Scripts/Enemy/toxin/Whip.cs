@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Enemy.toxin
@@ -8,6 +9,7 @@ namespace Enemy.toxin
 
     public class Whip : MonoBehaviour
     {
+        public float whipForce = 500f, whipRadius = 5f;
         public Transform attackPoint;
         public Transform player;
         public float attackSpeed = 1.0f;
@@ -18,12 +20,17 @@ namespace Enemy.toxin
             player = GameObject.Find("Player").transform;
         }
 
-        void Update()
+        void OnTriggerEnter(Collider collider)
         {
-            if (Vector3.Distance(transform.position, player.position) <= attackDistance)
+            if (collider.CompareTag("Player"))
             {
-                AttackPlayer();
+          WhipEffect(collider.GetComponent<Rigidbody>());
             }
+        }
+
+        private void WhipEffect(Rigidbody rb)
+        {
+            rb.AddExplosionForce(whipForce,-rb.transform.forward,whipRadius);
         }
 
         void AttackPlayer()

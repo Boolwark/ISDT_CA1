@@ -18,7 +18,8 @@ namespace Enemy
         public GameObject projectile;
 
         public LayerMask whatIsGround, whatIsPlayer;
-
+        public float bulletSpeed;
+        public bool hasKinematicProjectile;
         // Patroling
         public Vector3 walkPoint;
         bool walkPointSet;
@@ -108,9 +109,20 @@ namespace Enemy
             if (!alreadyAttacked)
             {
                 //attacking code here
-                var rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-                rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+                if (hasKinematicProjectile)
+                {
+                    Vector3 dir = player.transform.position - transform.position;
+                    var proj = Instantiate(projectile, transform.position,
+                        Quaternion.LookRotation(dir));
+                    proj.GetComponent<Rigidbody>().velocity = dir.normalized * bulletSpeed;
+                }
+                else
+                {
+                    var rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                    rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                    rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+                }
+ 
 
                 alreadyAttacked = true;
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
