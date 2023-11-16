@@ -1,7 +1,13 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Effects;
+using Effects.DefaultNamespace.GameUI;
 using Environment;
 using Stats;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Weapons.Misc
 {
@@ -15,7 +21,15 @@ public class C4Explosive : MonoBehaviour
     public float explosionForce = 1000.0f;
     public float damageAmount;// Force of the explosion
 
+    public UnityEvent OnExplode;
 
+    private float remainingTime;
+    public TextMeshProUGUI countdownText;
+
+    private void Start()
+    {
+        remainingTime = countdown;
+    }
 
     public void OnSelectExit()
     {
@@ -47,6 +61,19 @@ public class C4Explosive : MonoBehaviour
          
             Invoke("Explode", countdown); // Start the countdown
         }
+        StartCoroutine(CountdownToExplode());
+    }
+    IEnumerator CountdownToExplode()
+    {
+        while (remainingTime > 0)
+        {
+            // Update the text display each frame
+            countdownText.text = $"{remainingTime:F2}";
+            remainingTime -= Time.deltaTime;
+            yield return null; 
+        }
+
+        Explode();
     }
 
     void Explode()
@@ -78,7 +105,8 @@ public class C4Explosive : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
             }
         }
-        
+
+        FindObjectOfType<CameraShake>().ShakeCamera();
         Destroy(gameObject);
     }
 }
