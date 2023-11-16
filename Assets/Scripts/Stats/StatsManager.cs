@@ -12,10 +12,11 @@ namespace Stats
         [SerializeField]private float HP = 100f;
         [SerializeField]public float Attack= 10f;
         [SerializeField]private float Speed  = 5f;
-        
+        public float killPoints;
         
         public UnityEvent OnDamageTaken;
 
+        public UnityEvent OnKilled;
         // Method to take damage
         public void TakeDamage(float damageAmount)
         {
@@ -28,6 +29,7 @@ namespace Stats
                 HP = 0;
                 // You can add any death logic here if needed
                 Debug.Log($"{gameObject.name} has died!");
+                LeaderboardManager.Instance.IncrementScore(killPoints);
                 ObjectPoolManager.ReturnObjectToPool(gameObject);
             }
         }
