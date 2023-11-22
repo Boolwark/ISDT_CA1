@@ -23,6 +23,12 @@ namespace Util
             StartCoroutine(LoadLevelAsync(sceneName));
             onSceneChanged?.Invoke();
         }
+        public void ChangeSceneDirect(string sceneName)
+        {
+            currentSceneIndex++;
+            onSceneChanged?.Invoke();
+            SceneManager.LoadScene(sceneName);
+        }
 
         IEnumerator LoadLevelAsync(string sceneName)
         {

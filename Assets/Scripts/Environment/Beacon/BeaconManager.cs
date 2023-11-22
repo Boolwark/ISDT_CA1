@@ -9,9 +9,11 @@ namespace Environment
 
 
         private Beacon[] beacons;
+        private int numBeacons;
         protected override void Awake()
         {
             beacons = FindObjectsOfType<Beacon>();
+            numBeacons = beacons.Length;
             base.Awake();
         }
 
@@ -22,5 +24,6 @@ namespace Environment
                 beacon.ToggleBeacon();
             }
         }
+        
     }
 }

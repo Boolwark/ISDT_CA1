@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Util;
 
 namespace Environment.Battery
@@ -21,6 +22,7 @@ namespace Environment.Battery
             if (nBatteriesRemaining == 0)
             {
               // Move onto next scene
+             LevelManager.Instance.ChangeSceneDirect("SecondScene");
             }
         }
     }
