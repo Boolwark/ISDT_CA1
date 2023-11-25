@@ -105,7 +105,10 @@ namespace Enemy
         {
             //make sure the enemy does not move
             agent.SetDestination(transform.position);
-            transform.LookAt(player);
+            Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+            targetRotation.x = 0;
+            targetRotation.z = 0;
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 0.5f);
             if (!alreadyAttacked)
             {
                 //attacking code here

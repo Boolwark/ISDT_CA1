@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,7 @@ namespace Ability.Abilities
             Vector3 grayScreenSpawnPoint = Camera.main.transform.position + Camera.main.transform.forward;
             currentGrayScreen.transform.parent = Camera.main.transform;
             currentGrayScreen.transform.position = grayScreenSpawnPoint;
+            currentGrayScreen.transform.forward = Camera.main.transform.forward;
             currentGrayScreen.gameObject.SetActive(true);
             Time.timeScale = slowDownFactor;
             

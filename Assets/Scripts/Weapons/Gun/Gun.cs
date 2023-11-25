@@ -8,11 +8,38 @@ public class Gun : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20f;
+    public float recoilRecoverySpeed = 0.8f;
+    public float maxSpreadTime = 1f;
+    [SerializeField] private Vector3 Spread = new Vector3(.1f, .1f, .1f); 
+    private BulletSpreadType bulletSpreadType;
     public Canvas ammoDisplayCanvas;
     public TMP_Text ammoDisplayText;
     protected XRGrabInteractable grabbable;
     public VisualEffect muzzleEffect;
+    private float timeOfLastShot = 0f;
+    public float rapidShootTime = 0f;
 
+    private enum BulletSpreadType
+    {
+        Simple,
+        Texture
+    }
+
+    private Vector3 GetSpread(float shootTime = 0)
+    {
+        Vector3 spread = Vector3.zero;
+        if (bulletSpreadType == BulletSpreadType.Simple)
+        {
+            spread = new Vector3(Random.Range(-Spread.x, Spread.x),Random.Range(-Spread.y, Spread.y),Random.Range(-Spread.z, Spread.z));
+            Mathf.Clamp01(shootTime / maxSpreadTime);
+        }
+        else if (bulletSpreadType == BulletSpreadType.Texture)
+        {
+            
+        }
+
+        return spread;
+    }
     protected virtual void Start()
     {
         grabbable = GetComponent<XRGrabInteractable>();
@@ -24,11 +51,21 @@ public class Gun : MonoBehaviour
 
     public virtual void FireBullet(ActivateEventArgs args)
     {
+        float delta = Time.time - timeOfLastShot;
+        if (delta >= recoilRecoverySpeed)
+        {
+            rapidShootTime += delta;
+        }
+        else
+        {
+            rapidShootTime = 0f;
+        }
         GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        spawnedBullet.GetComponent<Rigidbody>().velocity = (spawnPoint.forward * fireSpeed) + GetSpread(rapidShootTime);
         muzzleEffect.Play();
         AudioManager.Instance.PlaySFX("GunShot");
         Destroy(spawnedBullet, 5);
+        timeOfLastShot = Time.time;
     }
 
     protected void ShowAmmoDisplay(SelectEnterEventArgs args)

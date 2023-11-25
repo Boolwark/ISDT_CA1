@@ -431,7 +431,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31912
+  m_Name: pb_Mesh54806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38126,6 +38126,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.903
       objectReference: {fileID: 0}
+    - target: {fileID: 1236720491111570288, guid: 95c32a7d17256432b9504602a89aca9e,
+        type: 3}
+      propertyPath: m_MoveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8675915457305201344, guid: 95c32a7d17256432b9504602a89aca9e,
         type: 3}
       propertyPath: velocity.x
@@ -38138,6 +38143,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c32a7d17256432b9504602a89aca9e, type: 3}
+--- !u!1 &1039870272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1236720490544322348, guid: 95c32a7d17256432b9504602a89aca9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1039870271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1039870273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 626741513, guid: 95c32a7d17256432b9504602a89aca9e,
@@ -38150,6 +38161,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1039870274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039870272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c057dc621284e0c978c8911c0fdf88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Interact
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5d8714d8-b971-4e3b-8cee-b243817538b8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  interactRange: 2
 --- !u!1001 &1103452374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38279,7 +38316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expandedScaleFactor: 1.2
-  settingsPanel: {fileID: 1395730986}
+  settingsPanel: {fileID: 1395730987}
+  canvasInitScale: {x: 0.05, y: 0.05, z: 0.05}
 --- !u!114 &1118422934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45274,7 +45312,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395730980}
   m_LocalRotation: {x: -0.008553265, y: 0.4164038, z: -0.003917601, w: 0.9091311}
-  m_LocalPosition: {x: 0, y: 0, z: 10.44}
+  m_LocalPosition: {x: 0, y: 0, z: 6.5}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45286,7 +45324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.704, y: 49.223, z: -0.816}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.01, y: 4.43}
+  m_AnchoredPosition: {x: 30.41, y: 4.36}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!43 &1400492738
@@ -45459,7 +45497,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31864
+  m_Name: pb_Mesh54740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46924,7 +46962,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31758
+  m_Name: pb_Mesh54620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

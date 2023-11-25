@@ -6,28 +6,31 @@ namespace UI
 {
     public class SettingsButton : GameButton
     {
-        public Canvas settingsPanel;
+        public RectTransform settingsPanel;
    
-        private bool isVisible;
+        private bool isVisible = false;
+        [SerializeField] private Vector3 canvasInitScale = new Vector3(0.5f,0.5f,0.5f);
         private void Start()
         {
             initScale = transform.localScale;
+            canvasInitScale = settingsPanel.transform.localScale;
             settingsPanel.transform.localScale = Vector3.zero;
         }
 
         public void OnClick()
         {
             Debug.Log("Clicking settings panel button");
-            if (!isVisible)
+         
+
+            isVisible = !isVisible;
+            if (isVisible)
             {
-                settingsPanel.transform.localScale = initScale;
+                settingsPanel.transform.localScale = canvasInitScale;
             }
             else
             {
                 settingsPanel.transform.localScale = Vector3.zero;
             }
-
-            isVisible = !isVisible;
 
         }
       
