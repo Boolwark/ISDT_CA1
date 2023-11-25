@@ -60,6 +60,7 @@ public class Gun : MonoBehaviour
         {
             rapidShootTime = 0f;
         }
+        
         GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
         spawnedBullet.GetComponent<Rigidbody>().velocity = (spawnPoint.forward * fireSpeed) + GetSpread(rapidShootTime);
         muzzleEffect.Play();
