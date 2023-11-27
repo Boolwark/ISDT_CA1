@@ -32,6 +32,7 @@ namespace Ability.Abilities
                         {
                             line.SetPosition(0,parent.transform.position);
                             line.SetPosition(1,parent.transform.position);
+                         
                             
                         });
 
