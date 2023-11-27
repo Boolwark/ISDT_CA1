@@ -9691,7 +9691,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 3955740817931674954}
   - {fileID: 3764656079247350456, guid: 0a88b2bfa59034ef29b1d21b10fd0c37, type: 3}
-  enemyCounts: 0100000001000000
+  enemyCounts: 0500000005000000
   spawnRadius: 10
   clusterOffset: 10
   yPos: -5.1
@@ -41014,9 +41014,13 @@ MonoBehaviour:
   bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
   spawnPoint: {fileID: 520968202}
   fireSpeed: 200
+  recoilRecoverySpeed: 0.8
+  maxSpreadTime: 1
+  Spread: {x: 0.1, y: 0.1, z: 0.1}
   ammoDisplayCanvas: {fileID: 1702655652}
   ammoDisplayText: {fileID: 1702655648}
   muzzleEffect: {fileID: 1824494906}
+  rapidShootTime: 0
   magazineSize: 30
   fireRate: 0.1
   reloadDuration: 2
@@ -46509,7 +46513,7 @@ PrefabInstance:
     - target: {fileID: 3562105608479355820, guid: efef1b797a7c54cc389c560af7ebe9b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.93
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3562105608479355820, guid: efef1b797a7c54cc389c560af7ebe9b9,
         type: 3}
@@ -46519,7 +46523,7 @@ PrefabInstance:
     - target: {fileID: 3562105608479355820, guid: efef1b797a7c54cc389c560af7ebe9b9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.5
+      value: -32.84
       objectReference: {fileID: 0}
     - target: {fileID: 3562105608479355820, guid: efef1b797a7c54cc389c560af7ebe9b9,
         type: 3}

@@ -1,3 +1,5 @@
+using System.Collections;
+using CodeMonkey.Utils;
 using DefaultNamespace.ObjectPooling;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +14,7 @@ namespace Stats
         [SerializeField]private float HP = 100f;
         [SerializeField]public float Attack= 10f;
         [SerializeField]private float Speed  = 5f;
+        private bool isDead;
         public float killPoints;
         
         public UnityEvent OnDamageTaken;
@@ -24,14 +27,24 @@ namespace Stats
             HP -= damageAmount;
 
             // Ensure HP doesn't go below 0
-            if (HP < 0)
+            if (HP < 0 && !isDead)
             {
+                isDead = true;
                 HP = 0;
                 // You can add any death logic here if needed
                 Debug.Log($"{gameObject.name} has died!");
                 LeaderboardManager.Instance.IncrementScore(killPoints);
-                ObjectPoolManager.ReturnObjectToPool(gameObject);
+                GetComponent<MeshRenderer>().enabled = false;
+                OnKilled?.Invoke();
+                StartCoroutine(ReturnObjectToPool());
+
             }
+        }
+
+        private IEnumerator ReturnObjectToPool()
+        {
+            yield return new WaitForSeconds(2f);
+            ObjectPoolManager.ReturnObjectToPool(gameObject);
         }
 
         // Method to change speed

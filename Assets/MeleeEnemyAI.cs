@@ -70,7 +70,7 @@ public class MeleeEnemyAI : MonoBehaviour
     }
      private void ChaseTarget()
     {
-        if (target != null)
+        if (target != null && agent != null)
         {
             Vector3 chasePosition = target.position - offset;
             agent.SetDestination(chasePosition);
@@ -94,7 +94,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
-        if (target != null)
+        if (target != null )
         {
             agent.ResetPath();
             animator.SetTrigger("attack");
@@ -128,7 +128,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private bool IsTargetInFOV(Transform target)
     {
-        if (target==null) return false;
+        if (target==null ) return false;
         Vector3 directionToTarget = (target.position - transform.position).normalized;
         float angleBetweenEnemyAndTarget = Vector3.Angle(transform.forward, directionToTarget);
 
