@@ -23,6 +23,7 @@ namespace Stats
         // Method to take damage
         public void TakeDamage(float damageAmount)
         {
+            Debug.Log(name + "has taken damage");
             OnDamageTaken?.Invoke();
             HP -= damageAmount;
 
