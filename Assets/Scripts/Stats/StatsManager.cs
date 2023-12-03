@@ -35,7 +35,14 @@ namespace Stats
                 // You can add any death logic here if needed
                 Debug.Log($"{gameObject.name} has died!");
                 LeaderboardManager.Instance.IncrementScore(killPoints);
-                GetComponent<MeshRenderer>().enabled = false;
+                if (TryGetComponent(out MeshRenderer meshRenderer))
+                {
+                    meshRenderer.enabled = false;
+                }
+                if (TryGetComponent(out SkinnedMeshRenderer skinnedMeshRenderer))
+                {
+                    skinnedMeshRenderer.enabled = false;
+                }
                 OnKilled?.Invoke();
                 StartCoroutine(ReturnObjectToPool());
 

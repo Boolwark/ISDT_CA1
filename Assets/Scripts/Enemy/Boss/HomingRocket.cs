@@ -1,4 +1,5 @@
 using DefaultNamespace.ObjectPooling;
+using UnityEngine.Events;
 
 namespace Enemy.Boss
 {
@@ -10,6 +11,7 @@ namespace Enemy.Boss
         public float speed = 10f;
         public float countdown = 5f;
         public GameObject explosionVFX;
+        public UnityEvent OnDestroyed;
 
         private Rigidbody rb;
 
@@ -45,6 +47,8 @@ namespace Enemy.Boss
         private void Explode()
         {
             Instantiate(explosionVFX, transform.position, Quaternion.identity);
+            OnDestroyed?.Invoke();
+            HomingRocketManager.Instance.OnRocketDestroyed();
             ObjectPoolManager.ReturnObjectToPool(gameObject);
         }
     }

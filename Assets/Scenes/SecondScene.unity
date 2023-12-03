@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6cd83fcc4adf4ed4a8c93b3706ff1da1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.425503
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6cd83fcc4adf4ed4a8c93b3706ff1da1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1544,7 +1544,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32084
+  m_Name: pb_Mesh102474
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2250,9 +2250,8 @@ MonoBehaviour:
   moveTowardsPlayerSpeed: 3
   barrelRollInterval: 20
   strafingDistance: 40
+  fireRocketPoint: {fileID: 971772443}
   offset: 30
-  homingMissilePrefab: {fileID: 4800710322023315158, guid: c8623ac5af39e45fb993b6046c4fdd2d,
-    type: 3}
   homingMissileCooldown: 5
 --- !u!1 &971738681
 GameObject:
@@ -2287,6 +2286,7 @@ GameObject:
   - component: {fileID: 971772443}
   - component: {fileID: 971638943}
   - component: {fileID: 971772444}
+  - component: {fileID: 971772448}
   m_Layer: 0
   m_Name: PA_ArchlightBomber
   m_TagString: Enemy
@@ -2409,6 +2409,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &971772448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971738683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99bf3460fbd450aa7c3c46ea5e0b178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 4800710322023315158, guid: c8623ac5af39e45fb993b6046c4fdd2d,
+    type: 3}
+  maxRocketCount: 100
+  player: {fileID: 0}
+  speed: 10
 --- !u!1001 &975816739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2434,7 +2451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10c805e783fd2d64f84bdbb6fae5d25f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.1
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10c805e783fd2d64f84bdbb6fae5d25f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2800,7 +2817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10c805e783fd2d64f84bdbb6fae5d25f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.85725
+      value: -11.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10c805e783fd2d64f84bdbb6fae5d25f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4032,7 +4049,7 @@ PrefabInstance:
     - target: {fileID: 4925673434408360931, guid: 623c75d33a44a4092b0d20e4af873239,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.48
+      value: -52.9
       objectReference: {fileID: 0}
     - target: {fileID: 4925673434408360931, guid: 623c75d33a44a4092b0d20e4af873239,
         type: 3}

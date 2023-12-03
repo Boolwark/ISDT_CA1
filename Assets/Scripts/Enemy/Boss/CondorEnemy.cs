@@ -16,6 +16,7 @@ namespace Enemy
         public float moveTowardsPlayerSpeed = 3f;
         public float barrelRollInterval = 5f;
         public float strafingDistance = 10f;
+        public Transform fireRocketPoint;
         public float offset = 5f;
 
         private float timeSinceLastShot = 0f;
@@ -23,8 +24,8 @@ namespace Enemy
         private bool isStrafing = false;
         private float strafeDirection = 1f;  // 1 or -1 for direction
 
-        
-        public GameObject homingMissilePrefab;
+
+     
         public float homingMissileCooldown = 5f;
         private float timeSinceLastHomingMissile = 0f;
         
@@ -119,16 +120,12 @@ namespace Enemy
         {
             if (timeSinceLastHomingMissile > homingMissileCooldown)
             {
-                FireHomingMissile();
+                HomingRocketManager.Instance.FireRocket(fireRocketPoint.position,fireRocketPoint.rotation);
                 timeSinceLastHomingMissile = 0f;
             }
             timeSinceLastHomingMissile += Time.deltaTime;
         }
-        void FireHomingMissile()
-        {
-            ObjectPoolManager.SpawnObject(homingMissilePrefab, transform.position, Quaternion.identity);
-            //GameObject missile = Instantiate(homingMissilePrefab, transform.position, Quaternion.identity);
-        }
+      
 
         void HandleBarrelRoll()
         {
