@@ -18,7 +18,7 @@ namespace Stats
         public float killPoints;
         
         public UnityEvent OnDamageTaken;
-
+        public UnityEvent OnHealTaken;
         public UnityEvent OnKilled;
         // Method to take damage
         public void TakeDamage(float damageAmount)
@@ -77,6 +77,13 @@ namespace Stats
             {
                 Attack = 0;
             }
+        }
+
+        public void TakeHeal(float healAmount)
+        {
+            Debug.Log(transform.name + "Is being healed");
+            HP += healAmount;
+            OnHealTaken?.Invoke();
         }
     }
 
