@@ -17,6 +17,7 @@ namespace Effects
         {
             var spawnedExplosion = ObjectPoolManager.SpawnObject(explosionPrefab, position, rotation);
             spawnedExplosion.transform.DOScale(spawnedExplosion.transform.localScale * 3f, 0.5f).SetEase(Ease.OutExpo);
+            AudioManager.Instance.PlaySFX("Explosion");
             Destroy(spawnedExplosion,explosionDuration);
         }
     }

@@ -28,6 +28,7 @@ namespace Weapons.Sword
                 GameObject target = hit.transform.gameObject;
                 print("Slicing " + target.name);
                 Slice(target);
+                AudioManager.Instance.PlaySFX("Slash");
             }
             
             
