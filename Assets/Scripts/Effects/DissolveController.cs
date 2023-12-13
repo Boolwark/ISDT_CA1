@@ -1,25 +1,34 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DissolveController : MonoBehaviour
 {
     private bool isVisible = false;
-    public float dissolveSpeed = 1.0f; // Speed of the dissolve effect
-    private Material dissolveMaterial;
+    public float dissolveSpeed = 0.5f; // Speed of the dissolve effect
+    public Material dissolveMaterial;
     private bool isDissolving = false;
     private float dissolveValue;
-    public float minDissolve = -0.61f;
+    public float minDissolve = -2f;
     public float maxDissolve = 1.2f;
+    public UnityEvent OnFadeOutEnd;
         
 
     void Start()
     {
         dissolveValue = minDissolve;
         // Get the material of the GameObject this script is attached to
-        dissolveMaterial = GetComponent<Renderer>().material;
+        //dissolveMaterial = GetComponent<Renderer>().material;
 
     
-        dissolveMaterial.SetFloat("_Dissolve", dissolveValue);
+        //dissolveMaterial.SetFloat("_Dissolve", dissolveValue);
+    }
+
+    public void SetDissolveMaterial(Material material,bool startFromMax)
+    {
+        this.dissolveMaterial = material;
+        dissolveValue = startFromMax ? maxDissolve : minDissolve;
+        material.SetFloat("_Dissolve", dissolveValue);
     }
 
     // Public method to start the dissolve effect
@@ -87,5 +96,6 @@ public class DissolveController : MonoBehaviour
         }
 
         isDissolving = false;
+        Destroy(gameObject);
     }
 }

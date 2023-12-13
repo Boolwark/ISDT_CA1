@@ -1,9 +1,11 @@
 using System;
 using Ability;
 using Ability.Abilities;
+using CodeMonkey.Utils;
 using EzySlice;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Util;
 
 namespace Weapons.Sword
 {
@@ -71,6 +73,11 @@ namespace Weapons.Sword
                 SetupSlicedComponent(upperHull);
                 SetupSlicedComponent(lowerHull);
                 Destroy(target);
+                FunctionTimer.Create(() =>
+                {
+                    DissolveManager.Instance.DissolveObject(upperHull.gameObject,0.5f);
+                    DissolveManager.Instance.DissolveObject(lowerHull.gameObject,0.5f);
+                }, 1f);
             }
         }
 
@@ -80,7 +87,6 @@ namespace Weapons.Sword
             MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
             collider.convex = true;
             rb.AddExplosionForce(cutForce,slicedObject.transform.position,1);
-
         }
     }
     

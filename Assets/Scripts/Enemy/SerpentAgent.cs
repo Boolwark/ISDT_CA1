@@ -20,7 +20,7 @@ namespace Enemy
                 // Start the dissolve effect
                 foreach (var dissolveController in dissolveControllers)
                 {
-                    dissolveController.StartFadingIn();
+                    dissolveController.ReverseDissolving();
                 }
             }
 
