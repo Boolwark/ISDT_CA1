@@ -369,10 +369,6 @@ MonoBehaviour:
   ammoDisplayText: {fileID: 2757159222468751110}
   muzzleEffect: {fileID: 3850623862907874574}
   rapidShootTime: 1
-  rocketPrefab: {fileID: 7642050431272168588, guid: 929df0529a7204acb8243d21c36f0c1c,
-    type: 3}
-  rocketSpawnPoint: {fileID: 1474229073422721752}
-  currentRocket: {fileID: 0}
 --- !u!1 &1543056389187562990
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +393,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543056389187562990}
-  m_LocalRotation: {x: -0, y: 0.010709399, z: -0, w: 0.99994266}
+  m_LocalRotation: {x: 0, y: 0.010707419, z: 0, w: 0.9999427}
   m_LocalPosition: {x: 0.037, y: 0, z: -0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -787,7 +783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3058324747643837888, guid: 929df0529a7204acb8243d21c36f0c1c, type: 3}
+    - {fileID: 2461128909646640080, guid: 929df0529a7204acb8243d21c36f0c1c, type: 3}
+    - {fileID: 6672306893250851929, guid: 929df0529a7204acb8243d21c36f0c1c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 929df0529a7204acb8243d21c36f0c1c, type: 3}
 --- !u!4 &6256950551059520602 stripped
 Transform:

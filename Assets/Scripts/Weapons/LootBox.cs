@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using CodeMonkey.Utils;
 using Stats;
 using UI.UI.DefaultNamespace.GameUI;
@@ -26,6 +27,7 @@ namespace Weapons
                 }
 
                 opened = true;
+                Destroy(gameObject,1f);
 
         }
 

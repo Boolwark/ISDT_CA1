@@ -10435,11 +10435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 3955740817931674954}
-  - {fileID: 3764656079247350456, guid: 0a88b2bfa59034ef29b1d21b10fd0c37, type: 3}
-  - {fileID: 1465730196587491614, guid: 796d8d446637e45e496b6f7c2768aade, type: 3}
-  enemyCounts: 020000000500000005000000
-  spawnRadius: 15
-  clusterOffset: 10
+  enemyCounts: 14000000
+  spawnRadius: 1
+  clusterOffset: 1
   yPos: -5.1
 --- !u!4 &511604465 stripped
 Transform:
@@ -30205,7 +30203,8 @@ Transform:
   m_LocalPosition: {x: -7.8135448, y: 8.85879, z: -8.075504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1901219310}
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41704,6 +41703,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1901219309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901219310}
+  - component: {fileID: 1901219311}
+  m_Layer: 0
+  m_Name: LootCrateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901219310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901219309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 28.763546, y: -4.80879, z: -2.8446455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1539887083}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1901219311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901219309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814bc06ba8c6402a90f72a6819ba9a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootCratePf: {fileID: 369740298086489826, guid: b526218ab8c38441eb2a0488ac40988e,
+    type: 3}
+  dropHeight: 2
+  timeToNextDrop: 0
+  dropCooldown: 60
 --- !u!1 &1919333796
 GameObject:
   m_ObjectHideFlags: 0

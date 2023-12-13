@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3431285007261984502}
   - component: {fileID: 3058324747643837888}
   - component: {fileID: 2461128909646640080}
+  - component: {fileID: 6672306893250851929}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -130,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabedbb1ff3d437bb4ef9de0bccf6315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orient: {fileID: 2550194796664998696}
   rocketSpeed: 100
+  countdown: 3
 --- !u!54 &2461128909646640080
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,6 +149,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6672306893250851929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2852959753694625097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5621372, y: 0.32860506, z: 0.32860515}
+  m_Center: {x: 0.781069, y: -0.000000080851265, z: 0.00000025992628}
 --- !u!1 &7642050431272168588
 GameObject:
   m_ObjectHideFlags: 0
