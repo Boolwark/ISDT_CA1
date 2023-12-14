@@ -35,6 +35,7 @@ public class AudioManager : MonoBehaviour
 
         musicSource.clip = s.clip;
         musicSource.Play();
+        musicSource.loop = true;
     }
     public void PlaySFX(string name)
     {

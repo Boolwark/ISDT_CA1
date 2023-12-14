@@ -28,10 +28,12 @@ namespace Util
             currentSceneIndex++;
             onSceneChanged?.Invoke();
             SceneManager.LoadScene(sceneName);
+            AudioManager.Instance.PlayMusic(sceneName);
         }
 
         IEnumerator LoadLevelAsync(string sceneName)
         {
+            AudioManager.Instance.PlayMusic(sceneName);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
             loadingScreen.SetActive(true);
             while (!operation.isDone)
