@@ -15,7 +15,8 @@ namespace Weapons
 		
             foreach (ContactPoint contact in collision.contacts)
             {
-                Instantiate(bulletHoles[bulletHolesIndex], contact.point, Quaternion.identity * Quaternion.Euler(0,0,bulletHolesIndex * 45f));
+                var bulletHole = Instantiate(bulletHoles[bulletHolesIndex], contact.point, Quaternion.identity * Quaternion.Euler(0,0,bulletHolesIndex * 45f));
+                Destroy(bulletHole,3f);
             }
         }
     }

@@ -96,6 +96,6 @@ public class DissolveController : MonoBehaviour
         }
 
         isDissolving = false;
-        Destroy(gameObject);
+       gameObject.SetActive(false);
     }
 }

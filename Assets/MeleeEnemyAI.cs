@@ -10,6 +10,7 @@ public class MeleeEnemyAI : MonoBehaviour
     private Transform target;
     private NavMeshAgent agent;
     private Animator animator;
+    public Core core;
 
     public float chaseRange = 5.0f;
     public float attackRange = 1.5f;
@@ -40,6 +41,7 @@ public class MeleeEnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         _statsManager = GetComponent<StatsManager>();
+        core = FindObjectOfType<Core>();
 
         lastPosition = transform.position;
         timeSinceLastMove = 0f;
@@ -158,6 +160,10 @@ public class MeleeEnemyAI : MonoBehaviour
         if (target != null)
         {
             state = State.Chase;
+        }
+        else
+        {
+            target = core.transform;
         }
     }
     private void CheckIfStuck()

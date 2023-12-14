@@ -85,6 +85,11 @@ namespace Stats
             HP += healAmount;
             OnHealTaken?.Invoke();
         }
+
+        public float GetCurrentHealth()
+        {
+            return HP;
+        }
     }
 
 }
