@@ -14,13 +14,12 @@ namespace Enemy
         public float speed = 5f;
         public float rotationSpeed = 10f;
         public float moveTowardsPlayerSpeed = 3f;
-        public float barrelRollInterval = 5f;
         public float strafingDistance = 10f;
         public Transform fireRocketPoint;
         public float offset = 5f;
 
         private float timeSinceLastShot = 0f;
-        private float timeSinceLastBarrelRoll = 0f;
+  
         private bool isStrafing = false;
         private float strafeDirection = 1f;  // 1 or -1 for direction
 
@@ -59,7 +58,7 @@ namespace Enemy
             HandleShooting(distanceToPlayer);
             HandleDiveBomb(distanceToPlayer);
             HandleHomingMissile();
-            HandleBarrelRoll();
+
         }
 
         void MoveTowardsPlayer()
@@ -127,21 +126,8 @@ namespace Enemy
         }
       
 
-        void HandleBarrelRoll()
-        {
-            if (timeSinceLastBarrelRoll > barrelRollInterval)
-            {
-                DoBarrelRoll();
-                timeSinceLastBarrelRoll = 0f;
-            }
-            timeSinceLastBarrelRoll += Time.deltaTime;
-        }
+    
 
-        void DoBarrelRoll()
-        {
-            transform.DORotate(new Vector3(0, 0, 360), 1f, RotateMode.FastBeyond360)
-                .SetRelative()
-                .SetEase(Ease.Linear);
-        }
+      
     }
 }

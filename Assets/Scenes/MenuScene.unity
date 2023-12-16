@@ -900,9 +900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Settings
-
-'
+  m_text: abILITY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1564,6 +1562,8 @@ MonoBehaviour:
   musicSounds:
   - name: FirstScene
     clip: {fileID: 8300000, guid: 4f84cc2837b084a5783ad7ecdaf62d04, type: 3}
+  - name: SecondScene
+    clip: {fileID: 8300000, guid: a5c08d9a56b724f9abb5c05c5809efcd, type: 3}
   sfxSounds:
   - name: GunShot
     clip: {fileID: 8300000, guid: 81764b23e5b364bcdbebf662664d45f4, type: 3}
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Difficulty
+  m_text: Chosen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expandedScaleFactor: 1.2
-  sceneName: FirstScene
+  sceneName: SecondScene
   button: {fileID: 747798398}
 --- !u!114 &747798402
 MonoBehaviour:
@@ -5666,7 +5666,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh351304
+  m_Name: pb_Mesh450520
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6119,7 +6119,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1400492738}
+  m_Mesh: {fileID: 1460819307}
 --- !u!33 &1376489228
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -6127,7 +6127,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376489226}
-  m_Mesh: {fileID: 1400492738}
+  m_Mesh: {fileID: 1460819307}
 --- !u!23 &1376489229
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11085,8 +11085,8 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1400492738}
-  m_VersionIndex: 1447
+  m_Mesh: {fileID: 1460819307}
+  m_VersionIndex: 1450
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11285,13 +11285,13 @@ RectTransform:
   m_AnchoredPosition: {x: 30.41, y: 4.36}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!43 &1400492738
+--- !u!43 &1460819307
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh351382
+  m_Name: pb_Mesh450598
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

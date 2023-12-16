@@ -2,28 +2,28 @@ using System;
 using CodeMonkey.Utils;
 using DefaultNamespace.ObjectPooling;
 using DepthFirstScheduler;
+using Environment;
 using UnityEngine;
 
 namespace Weapons.Misc
 {
-    public class DroneBall : MonoBehaviour
+    public class DroneBall : ThrowableObject
     {
-        private Rigidbody rb;
+
         public GameObject spawnEffect;
         public GameObject dronePf;
         private bool activated = false;
         private void Start()
         {
             spawnEffect.SetActive(false);
-            rb = GetComponent<Rigidbody>();
+        
         
         }
 
-        public void OnSelectExit()
+        public new void OnSelectExit()
         {
             if (activated) return;
-            rb.AddForce(transform.forward*1000f,ForceMode.Force);
-            rb.AddForce(transform.up*1000f,ForceMode.Force);
+           base.OnSelectExit();
             PlaySpawnEffect();
             SpawnDrone();
         }

@@ -15,7 +15,7 @@ namespace Weapons.Misc
      // Prefab for the airstrike visual effect
     // UI Text to show remaining airstrikes
         public float cooldown = 5f; // Cooldown duration in seconds
-        public VisualEffect airstrikeVFX;
+        public ParticleSystem airstrikeVFX;
         private float cooldownTimer = 0f;
         public GameObject reticle;
         public float duration;
@@ -48,6 +48,7 @@ namespace Weapons.Misc
 
         private IEnumerator ActivateAirstrike()
         {
+            reticle.SetActive(false);
             Debug.Log("Airstrike");
             airstrikeVFX.Stop();
             reticle.transform.position = new Vector3(target.transform.position.x,target.transform.position.y - yOffset,target.transform.position.z);
@@ -58,12 +59,13 @@ namespace Weapons.Misc
 
             // Eliminate all enemies in the scene
            
-                ExplosionManager.Instance.SpawnExplosion(reticle.transform.position,Quaternion.identity);
+               
                 if (Vector3.Distance(target.transform.position, reticle.transform.position) > damageRadius)
                 {
                     if (target.transform.TryGetComponent(out StatsManager statsManager))
                     {
                         Debug.Log("PLayer is damageed");
+                        ExplosionManager.Instance.SpawnExplosion(reticle.transform.position,Quaternion.identity);
                         statsManager.TakeDamage(damage);
                     } 
                 }
@@ -75,6 +77,7 @@ namespace Weapons.Misc
         {
             yield return new WaitForSeconds(duration);
             airstrikeVFX.Stop();
+            reticle.SetActive(true);
         }
         
     }

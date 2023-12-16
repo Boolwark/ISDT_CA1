@@ -27,7 +27,7 @@ namespace Enemy.Boss
             {
                 Vector3 direction = (player.transform.position - transform.position).normalized;
                 rb.velocity = direction * speed;
-                transform.LookAt(player.transform);
+                transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(direction),speed);
             }
         }
 
