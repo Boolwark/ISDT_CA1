@@ -1,4 +1,5 @@
 using System;
+using Effects.DefaultNamespace.GameUI;
 using UnityEngine;
 
 namespace Enemy
@@ -12,6 +13,7 @@ namespace Enemy
         private void Start()
         {
             target = Camera.main.transform;
+            
         }
 
         private bool IsTargetInFOV(Transform target)
