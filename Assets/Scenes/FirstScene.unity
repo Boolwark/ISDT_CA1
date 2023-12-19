@@ -8544,6 +8544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0bde39f5e448291661c716a459071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cutCascades: 5
+  explodeForce: 0
 --- !u!1 &453139575
 GameObject:
   m_ObjectHideFlags: 0
@@ -42188,6 +42190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d450da27334ba49075a002020db04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeDuration: 0.5
   bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
   spawnPoint: {fileID: 520968202}
   fireSpeed: 200
@@ -42195,6 +42198,8 @@ MonoBehaviour:
   maxSpreadTime: 1
   Spread: {x: 0.1, y: 0.1, z: 0.1}
   ammoDisplayCanvas: {fileID: 1702655652}
+  recoilStrength: 0.8
+  nVibrations: 2
   ammoDisplayText: {fileID: 1702655648}
   muzzleEffect: {fileID: 1824494906}
   rapidShootTime: 0

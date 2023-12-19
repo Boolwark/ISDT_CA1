@@ -7,6 +7,7 @@ namespace MimicSpace
 {
     public class Mimic : MonoBehaviour
     {
+        public float screechProbability = 0.5f;
         public StatsManager statsManager;
         [Header("Animation")]
         public GameObject legPrefab;
@@ -106,6 +107,11 @@ namespace MimicSpace
             if (enemy.TryGetComponent(out StatsManager sm))
             {
                 sm.TakeDamage(statsManager.Attack);
+                if (UnityEngine.Random.Range(0,1) <= screechProbability)
+                {
+                    AudioManager.Instance.PlaySFX("MimicAttack");
+                }
+            
             }
     
      

@@ -1,3 +1,4 @@
+using Effects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.VFX;
@@ -5,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Gun : MonoBehaviour
 {
+    private RecoilEffect recoilEffect;
+    public float shakeDuration = 2f;
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20f;
@@ -13,6 +16,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private Vector3 Spread = new Vector3(.1f, .1f, .1f); 
     private BulletSpreadType bulletSpreadType;
     public Canvas ammoDisplayCanvas;
+    public float recoilStrength = 1f;
+    public int nVibrations = 2;
+    
     public TMP_Text ammoDisplayText;
     protected XRGrabInteractable grabbable;
     public VisualEffect muzzleEffect;
@@ -24,6 +30,7 @@ public class Gun : MonoBehaviour
         Simple,
         Texture
     }
+    
 
     private Vector3 GetSpread(float shootTime = 0)
     {
@@ -47,6 +54,7 @@ public class Gun : MonoBehaviour
         grabbable.selectEntered.AddListener(ShowAmmoDisplay);
         grabbable.selectExited.AddListener(HideAmmoDisplay);
         ammoDisplayCanvas.gameObject.SetActive(false);
+        recoilEffect = FindObjectOfType<RecoilEffect>();
     }
 
     public virtual void FireBullet(ActivateEventArgs args)
@@ -60,7 +68,11 @@ public class Gun : MonoBehaviour
         {
             rapidShootTime = 0f;
         }
-        
+
+        if (recoilEffect != null)
+        {
+            recoilEffect.Activate(recoilStrength,nVibrations,shakeDuration);
+        }
         GameObject spawnedBullet = Instantiate(bullet, spawnPoint.position, Quaternion.identity);
         spawnedBullet.GetComponent<Rigidbody>().velocity = (spawnPoint.forward * fireSpeed) + GetSpread(rapidShootTime);
         muzzleEffect.Play();

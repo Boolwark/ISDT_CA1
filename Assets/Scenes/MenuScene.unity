@@ -288,6 +288,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3709272625979757044, guid: 7b9879f393e9d404d8853fd4e0d8a635,
+        type: 3}
+      propertyPath: nVibrations
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709272625979757044, guid: 7b9879f393e9d404d8853fd4e0d8a635,
+        type: 3}
+      propertyPath: shakeDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709272625979757044, guid: 7b9879f393e9d404d8853fd4e0d8a635,
+        type: 3}
+      propertyPath: recoilStrength
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9879f393e9d404d8853fd4e0d8a635, type: 3}
 --- !u!1 &148048762
@@ -1836,6 +1851,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 73ca8aa7afcc04a5b9205a82f49bdfb8, type: 3}
   - name: Explosion
     clip: {fileID: 8300000, guid: dce0fc50c98b24282867ddc791aa869d, type: 3}
+  - name: MimicAttack
+    clip: {fileID: 8300000, guid: baf748626150f48b28ebb8e8d70af2a0, type: 3}
   musicSource: {fileID: 520457142}
   sfxSource: {fileID: 520457140}
 --- !u!82 &520457142
@@ -1963,7 +1980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1037e3cf0dc55a54fb6095b7d4075f91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.65
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1037e3cf0dc55a54fb6095b7d4075f91, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4213,12 +4230,17 @@ PrefabInstance:
     - target: {fileID: 8675915457305201344, guid: 95c32a7d17256432b9504602a89aca9e,
         type: 3}
       propertyPath: velocity.x
-      value: 0.16015685
+      value: 0.28028297
       objectReference: {fileID: 0}
     - target: {fileID: 8675915457305201344, guid: 95c32a7d17256432b9504602a89aca9e,
         type: 3}
       propertyPath: velocity.z
-      value: 0.9046527
+      value: -0.7360405
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675915457305201344, guid: 95c32a7d17256432b9504602a89aca9e,
+        type: 3}
+      propertyPath: screechProbability
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95c32a7d17256432b9504602a89aca9e, type: 3}
@@ -4398,6 +4420,19 @@ MonoBehaviour:
   duration: 2
   targetIntensity: 0.9
   volume: {fileID: 1039870276}
+--- !u!114 &1039870293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039870272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93307100d31d4cb18f39e27c587f9c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraShake: {fileID: 1779910866}
 --- !u!1 &1042545536
 GameObject:
   m_ObjectHideFlags: 0
@@ -13183,6 +13218,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738727740}
   m_CullTransparentMesh: 1
+--- !u!114 &1779910866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2096198062, guid: 95c32a7d17256432b9504602a89aca9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1039870271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f5147f22cc4441a50749ace94edd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1790132776
 GameObject:
   m_ObjectHideFlags: 0
