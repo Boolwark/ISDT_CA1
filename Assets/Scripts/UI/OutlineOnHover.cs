@@ -12,6 +12,7 @@ namespace UI
         public void Start()
         {
             initColor = GetComponent<Outline>().OutlineColor;
+            
         }
 
 

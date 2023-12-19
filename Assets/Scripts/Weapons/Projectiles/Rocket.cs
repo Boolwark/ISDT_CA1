@@ -2,6 +2,7 @@ using System;
 using DefaultNamespace.ObjectPooling;
 using Effects;
 using Stats;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -35,6 +36,7 @@ namespace Weapons.Projectiles
                 Debug.Log("Enemy hit exploding");
                 Explode();
             }
+            
         }
 
         private void Explode()

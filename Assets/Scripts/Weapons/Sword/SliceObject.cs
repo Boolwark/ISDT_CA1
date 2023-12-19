@@ -16,7 +16,7 @@ namespace Weapons.Sword
         public VelocityEstimator velocityEstimator;
         public Material crossSectionMaterial;
         public LayerMask sliceableLayer;
-        public float cutForce = 5f;
+        public float cutForce = 500f;
         private Rigidbody playerRB;
 
         public AbilityHolder abilityHolder;
