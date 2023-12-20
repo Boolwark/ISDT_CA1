@@ -50,6 +50,14 @@ public class AudioManager : MonoBehaviour
         sfxSource.clip = s.clip;
         sfxSource.PlayOneShot(sfxSource.clip);
     }
+    public void StopSFX()
+    {
+        sfxSource.Stop();
+    }
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
 
     private void Start()
     {

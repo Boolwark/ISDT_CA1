@@ -1,8 +1,10 @@
+using System;
 using DefaultNamespace.ObjectPooling;
 using UnityEngine;
 using Util;
 using System.Collections.Generic;
 using CodeMonkey.Utils;
+using Random = UnityEngine.Random;
 
 namespace Enemy
 {
@@ -15,6 +17,10 @@ namespace Enemy
         public GameObject spawnEffect;
         public float yPos = -5.1f;
         public bool spawnOnStart = true;
+        public bool spawnInfinitely = false;
+        public float spawnCooldown = 20f;
+        private float timeToNextSpawn = 0f;
+        private int hordeSize;
         private void Start()
         {
             Debug.Log("Player chose difficulty: "+GameManager.Instance.chosenDifficulty);
@@ -23,19 +29,23 @@ namespace Enemy
             switch (GameManager.Instance.chosenDifficulty)
             {
                 case GameManager.Difficulty.EASY:
-                    SpawnHorde(3);
+                    hordeSize = 3;
+                
                     break;
                 case GameManager.Difficulty.NORMAL:
-                    SpawnHorde(5);
+                    hordeSize = 5;
                     break;
                 case GameManager.Difficulty.NIGHTMARE:
-                    SpawnHorde(10);
+                    hordeSize = 10;
                     break;
+                
             }
+            SpawnHorde(hordeSize);
         }
 
         public void SpawnHorde(int hordeSize)
         {
+            timeToNextSpawn = spawnCooldown;
             for (int i = 0; i < hordeSize; i++)
             {
                 int prefabIndex = Random.Range(0, enemyPrefabs.Count); // Select a random enemy prefab index
@@ -67,6 +77,21 @@ namespace Enemy
             }
 
             return randomDirection;
+        }
+
+        private void Update()
+        {
+            if (spawnInfinitely)
+            {
+                if (timeToNextSpawn <= 0f)
+                {
+                    SpawnHorde(hordeSize);
+                }
+                else
+                {
+                    timeToNextSpawn -= Time.deltaTime;
+                }
+            }
         }
     }
 }

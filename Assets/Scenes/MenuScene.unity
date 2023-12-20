@@ -353,6 +353,7 @@ MonoBehaviour:
   sceneSpawnPoints:
   - {x: 21.1, y: 0, z: 2.08}
   - {x: 21.1, y: 0, z: 2.08}
+  - {x: 21.1, y: 0, z: 2.08}
   chosenDifficulty: 1
 --- !u!1 &155481958
 GameObject:
@@ -1839,8 +1840,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: FirstScene
-    clip: {fileID: 8300000, guid: 4f84cc2837b084a5783ad7ecdaf62d04, type: 3}
+    clip: {fileID: 8300000, guid: c61d8d3f86dfa4cf8bd7e06734f5553a, type: 3}
   - name: SecondScene
+    clip: {fileID: 8300000, guid: a5c08d9a56b724f9abb5c05c5809efcd, type: 3}
+  - name: ThirdScene
     clip: {fileID: 8300000, guid: a5c08d9a56b724f9abb5c05c5809efcd, type: 3}
   sfxSounds:
   - name: GunShot
@@ -1853,6 +1856,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: dce0fc50c98b24282867ddc791aa869d, type: 3}
   - name: MimicAttack
     clip: {fileID: 8300000, guid: baf748626150f48b28ebb8e8d70af2a0, type: 3}
+  - name: GladosSpeech1
+    clip: {fileID: 8300000, guid: b878334bbc55e4e94abc0354bc2f2838, type: 3}
+  - name: GladosSpeech2
+    clip: {fileID: 8300000, guid: 24d9d254d9f23409a96d9fafdd64d66a, type: 3}
+  - name: AirFry
+    clip: {fileID: 8300000, guid: f2183a39c3aa24cb9b21f5e581adaf3a, type: 3}
   musicSource: {fileID: 520457142}
   sfxSource: {fileID: 520457140}
 --- !u!82 &520457142
@@ -3400,7 +3409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expandedScaleFactor: 1.2
-  sceneName: FirstScene
+  sceneName: SecondScene
   button: {fileID: 747798398}
 --- !u!114 &747798402
 MonoBehaviour:
@@ -4031,20 +4040,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CutCascades: 3
   ExplodeForce: 5
---- !u!114 &1001877707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001877695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e085894eb24578a9c4e29665e17e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scanObj: {fileID: 677769690}
-  effectDuration: 2
 --- !u!1 &1028500867
 GameObject:
   m_ObjectHideFlags: 0

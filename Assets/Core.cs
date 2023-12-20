@@ -33,6 +33,6 @@ public class Core : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FaceTarget(target);
+        //FaceTarget(target);
     }
 }

@@ -1,3 +1,4 @@
+
 using System;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
@@ -7,6 +8,7 @@ namespace Player.XR
 {
     public class XRGrabInteractableTwoAttach : XRGrabInteractable
     {
+        public bool enableMovement = false;
         public Transform leftAttachTransform;
         public Transform rightAttachTransform;
         private Rigidbody playerRB;
@@ -45,8 +47,12 @@ namespace Player.XR
             if (isHeld)
             {
                 // A fix to player clipping through walls. When they hold a weapon, they must become stationary. 
-                playerRB.velocity = Vector3.zero;
-                _continuousMoveProviderBase.moveSpeed = 0;
+                if (!enableMovement)
+                {
+                    playerRB.velocity = Vector3.zero;
+                    _continuousMoveProviderBase.moveSpeed = 0;
+                }
+             
             }
             else
             {
