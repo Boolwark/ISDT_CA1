@@ -13,5 +13,9 @@ namespace Effects
             md.CutCascades = cutCascades;
             md.DestroyMesh();
         }
+        public void OnSelectExit()
+        {
+            Activate();
+        }
     }
 }

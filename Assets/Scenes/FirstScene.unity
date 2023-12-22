@@ -3224,7 +3224,19 @@ MonoBehaviour:
       m_Calls: []
   OnKilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162519495}
+        m_TargetAssemblyTypeName: Effects.MeshDestroy, Assembly-CSharp
+        m_MethodName: DestroyMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &162519493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3254,6 +3266,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &162519495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162519491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5753f80db004a8b9e5f6f81eda3c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 3
 --- !u!1 &165639758
 GameObject:
   m_ObjectHideFlags: 0
@@ -8501,13 +8527,39 @@ MonoBehaviour:
       m_Calls: []
   OnKilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162519495}
+        m_TargetAssemblyTypeName: Effects.MeshDestroy, Assembly-CSharp
+        m_MethodName: DestroyMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &431202835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9f483ba0e96f1414a84ea4b0fbc13414,
     type: 3}
   m_PrefabInstance: {fileID: 431202832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &431202836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431202833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5753f80db004a8b9e5f6f81eda3c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 3
 --- !u!4 &436052184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 276641882403259254, guid: 627df2e6f442e45cbaffe1e6e5dde3c9,
@@ -9966,7 +10018,19 @@ MonoBehaviour:
       m_Calls: []
   OnKilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162519495}
+        m_TargetAssemblyTypeName: Effects.MeshDestroy, Assembly-CSharp
+        m_MethodName: DestroyMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &487657712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9996,6 +10060,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &487657714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487657710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5753f80db004a8b9e5f6f81eda3c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 3
 --- !u!1 &490911950
 GameObject:
   m_ObjectHideFlags: 0
@@ -13200,7 +13278,19 @@ MonoBehaviour:
       m_Calls: []
   OnKilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162519495}
+        m_TargetAssemblyTypeName: Effects.MeshDestroy, Assembly-CSharp
+        m_MethodName: DestroyMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &666581348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13230,6 +13320,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &666581350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666581346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5753f80db004a8b9e5f6f81eda3c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 3
 --- !u!1 &670271809
 GameObject:
   m_ObjectHideFlags: 0
@@ -30087,7 +30191,33 @@ MonoBehaviour:
       m_Calls: []
   OnKilled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162519495}
+        m_TargetAssemblyTypeName: Effects.MeshDestroy, Assembly-CSharp
+        m_MethodName: DestroyMesh
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1540999653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540999648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5753f80db004a8b9e5f6f81eda3c827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 3
 --- !u!4 &1546670893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 855931036937325824, guid: 627df2e6f442e45cbaffe1e6e5dde3c9,
@@ -42009,7 +42139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d450da27334ba49075a002020db04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.5
+  shakeDuration: 0.3
   bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
   spawnPoint: {fileID: 520968202}
   fireSpeed: 200
@@ -42017,8 +42147,8 @@ MonoBehaviour:
   maxSpreadTime: 1
   Spread: {x: 0.1, y: 0.1, z: 0.1}
   ammoDisplayCanvas: {fileID: 1702655652}
-  recoilStrength: 0.8
-  nVibrations: 2
+  recoilStrength: 0.4
+  nVibrations: 1
   ammoDisplayText: {fileID: 1702655648}
   muzzleEffect: {fileID: 1824494906}
   rapidShootTime: 0
@@ -42166,6 +42296,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  enableMovement: 0
   leftAttachTransform: {fileID: 0}
   rightAttachTransform: {fileID: 0}
 --- !u!114 &1930693507
@@ -42194,7 +42325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.09710693, g: 1, b: 0, a: 1}
+  outlineColor: {r: 1, g: 0, b: 0.93706894, a: 1}
   outlineWidth: 5
   precomputeOutline: 0
   bakeKeys: []
@@ -47464,7 +47595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e085894eb24578a9c4e29665e17e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 3
+  duration: 60
   scanObj: {fileID: 1760352628}
   effectDuration: 5
   beaconObj: {fileID: 1412771349}
@@ -47524,7 +47655,8 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 3955740817931674954}
+      objectReference: {fileID: 4189742388507765014, guid: efef1b797a7c54cc389c560af7ebe9b9,
+        type: 3}
     - target: {fileID: 2173035384158315142, guid: 14a64d82a43e94c6ebc8e4d8310bd155,
         type: 3}
       propertyPath: m_RootOrder
@@ -47804,12 +47936,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efef1b797a7c54cc389c560af7ebe9b9, type: 3}
---- !u!1 &3955740817931674954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4189742388507765014, guid: efef1b797a7c54cc389c560af7ebe9b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 3955740817931674953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4566796424002418020
 PrefabInstance:
   m_ObjectHideFlags: 0

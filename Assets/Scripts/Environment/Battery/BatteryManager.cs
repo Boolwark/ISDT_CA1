@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -8,22 +9,22 @@ namespace Environment.Battery
 {
     public class BatteryManager : Singleton<BatteryManager>
     {
-        
-        private int nBatteriesRemaining;
+        public TextMeshProUGUI batteryUI;
+        private int nBatteriesActivated=0;
+        private int totalBatteries;
 
         private void Start()
         {
-            nBatteriesRemaining = GameObject.FindGameObjectsWithTag("Battery").Length;
+            totalBatteries = FindObjectsOfType<Battery>().Length;
+            batteryUI = FindObjectOfType<BatteryUI>().textMeshProUGUI;
+
         }
         public void OnBatteryActivated()
         {
-            nBatteriesRemaining--;
-            print($"Number of remaining batteries:{nBatteriesRemaining}");
-            if (nBatteriesRemaining == 0)
-            {
-              // Move onto next scene
-             LevelManager.Instance.ChangeSceneDirect("SecondScene");
-            }
+            nBatteriesActivated++;
+            print($"Number of activated batteries:{nBatteriesActivated}");
+            batteryUI.text = $"Activated batteries:\n {nBatteriesActivated}/{totalBatteries}";
+            
         }
     }
 }

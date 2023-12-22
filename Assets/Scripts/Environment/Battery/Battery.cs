@@ -1,35 +1,31 @@
+using System;
 using CodeMonkey.Utils;
+using UI;
 using UnityEngine;
 
 namespace Environment.Battery
 {
     public class Battery : MonoBehaviour
     {
+        public ButtonFollowVisual buttonFollowVisual;
         private bool activated = false;
-        public float dropHeight = 5f;
         public float effectDuration;
-        public GameObject lootCratePf;
         public GameObject activateEffect;
-        public void OnSelect()
+        public void Activate()
         {
             if (!activated)
             {
                 BatteryManager.Instance.OnBatteryActivated();
-                //Spawn Loot drop
-                SpawnLootDrop();
                 PlayActivateEffect();
             }
             activated = true;
         }
 
-        private void SpawnLootDrop()
+        private void Start()
         {
-            var lootCrate = Instantiate(lootCratePf, transform.position + new Vector3(0f, dropHeight, 0f), Quaternion.identity);
-            var rb = lootCrate.GetComponent<Rigidbody>();
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            FunctionTimer.Create(() => { rb.isKinematic = true; },2f);
+            buttonFollowVisual.OnButtonPressed.AddListener(Activate);
         }
+
 
         private void PlayActivateEffect()
         {
