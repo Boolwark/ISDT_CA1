@@ -41,26 +41,16 @@ public class C4Explosive : MonoBehaviour
 
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.CompareTag("AttachPoint"))
+            if (hitCollider.TryGetComponent(out CustomXRSocketInteractor customXRSocketInteractor))
             {
-                float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closestAttachPoint = hitCollider.transform;
-                }
+                transform.SetParent(customXRSocketInteractor.attachTransform);
+                transform.localPosition = Vector3.zero;
+                Invoke("Explode", countdown);
+                break;
             }
         }
 
-        // If an attach point is found, attach the C4 to it
-        if (closestAttachPoint != null)
-        {
-            transform.SetParent(closestAttachPoint);
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
-         
-            Invoke("Explode", countdown); // Start the countdown
-        }
+      
         StartCoroutine(CountdownToExplode());
     }
     IEnumerator CountdownToExplode()
@@ -94,9 +84,9 @@ public class C4Explosive : MonoBehaviour
                 sm.TakeDamage(damageAmount);
             }
             // the explosion can destroy the environment as well, such as doors,walls,etc...
-            else if (collider.CompareTag("Destructible"))
+            if (collider.TryGetComponent(out MeshDestroy meshDestroy))
             {
-                collider.GetComponent<IDestructible>().OnDestroy();
+                meshDestroy.DestroyMesh();
             }
             // Apply explosion force (if the object has a Rigidbody)
             Rigidbody rb = collider.GetComponent<Rigidbody>();

@@ -1,3 +1,5 @@
+using CodeMonkey.Utils;
+
 namespace Effects
 {
    using System;
@@ -279,8 +281,11 @@ public class MeshDestroy : MonoBehaviour
             mesh.vertices = Vertices;
             mesh.normals = Normals;
             mesh.uv = UV;
-            for(var i = 0; i < Triangles.Length; i++)
+            for (var i = 0; i < Triangles.Length; i++)
+            {
                 mesh.SetTriangles(Triangles[i], i, true);
+            }
+     
             Bounds = mesh.bounds;
             
             var renderer = GameObject.AddComponent<MeshRenderer>();
@@ -296,6 +301,7 @@ public class MeshDestroy : MonoBehaviour
             var meshDestroy = GameObject.AddComponent<MeshDestroy>();
             meshDestroy.CutCascades = original.CutCascades;
             meshDestroy.ExplodeForce = original.ExplodeForce;
+            FunctionTimer.Create(() => { GameObject.SetActive(false); }, 3f);
 
         }
 

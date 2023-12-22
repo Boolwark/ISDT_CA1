@@ -37,7 +37,7 @@ namespace Weapons
             lootDropEffect.SetActive(true);
             foreach (var loot in lootList)
             {
-                Instantiate(loot, transform.position, transform.rotation);
+                Instantiate(loot, transform.position + new Vector3(0,1,0), transform.rotation);
                 Rigidbody lootRB = loot.GetComponentInChildren<Rigidbody>();
                 lootRB.isKinematic = false;
                 lootRB.GetComponentInChildren<Rigidbody>().AddExplosionForce(lootExplosionForce,transform.position,1F);

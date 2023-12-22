@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Effects;
 using UnityEngine;
 
 namespace Environment
@@ -16,5 +17,7 @@ namespace Environment
         {
             transform.DORotate(transform.rotation.eulerAngles +new Vector3(0, 90, 0),2);
         }
+
+   
     }
 }
