@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 4800710322023315156}
   - component: {fileID: 1658867512792846966}
   - component: {fileID: 4356197386567619684}
-  - component: {fileID: 7104584822026942970}
-  - component: {fileID: 7076735052488505930}
   m_Layer: 0
   m_Name: HomingRocket
   m_TagString: Untagged
@@ -136,40 +134,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5969162, y: 0.59692574, z: 1.3981781}
   m_Center: {x: -1.8488655, y: 0.36114788, z: -0.08270264}
---- !u!114 &7104584822026942970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800710322023315158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 989a08cd086a4f9c8a6ca5b626e6b984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemySpawner: {fileID: 7076735052488505930}
-  hordeSize: 3
---- !u!114 &7076735052488505930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800710322023315158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63633c8d8994c11bdb48ed4cc3591a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 3764656079247350456, guid: 0a88b2bfa59034ef29b1d21b10fd0c37, type: 3}
-  enemyCounts: 03000000
-  spawnRadius: 5
-  clusterOffset: 2
-  spawnEffect: {fileID: 2968789972269948658}
-  yPos: -5.1
-  spawnOnStart: 0
 --- !u!1001 &6147570239111789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,12 +206,6 @@ PrefabInstance:
 --- !u!4 &1392618440168620842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1388872548669538631, guid: a164e676dbbd6e54587237e619372c98,
-    type: 3}
-  m_PrefabInstance: {fileID: 6147570239111789}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2968789972269948658 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2965222256817593503, guid: a164e676dbbd6e54587237e619372c98,
     type: 3}
   m_PrefabInstance: {fileID: 6147570239111789}
   m_PrefabAsset: {fileID: 0}

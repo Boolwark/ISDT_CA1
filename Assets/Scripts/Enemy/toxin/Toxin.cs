@@ -10,7 +10,7 @@ namespace Enemy.toxin
     {
         public float spawnDuration,offset;
         public List<GameObject> limbs;
-        private void Start()
+        private void OnEnable()
         {
             foreach (var limb in limbs)
             {

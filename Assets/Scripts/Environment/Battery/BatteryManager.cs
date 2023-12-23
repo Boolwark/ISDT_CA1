@@ -12,6 +12,7 @@ namespace Environment.Battery
         public TextMeshProUGUI batteryUI;
         private int nBatteriesActivated=0;
         private int totalBatteries;
+        public UnityEvent OnAllBatteriesActivated;
 
         private void Start()
         {
@@ -24,7 +25,10 @@ namespace Environment.Battery
             nBatteriesActivated++;
             print($"Number of activated batteries:{nBatteriesActivated}");
             batteryUI.text = $"Activated batteries:\n {nBatteriesActivated}/{totalBatteries}";
-            
+            if (nBatteriesActivated == totalBatteries)
+            {
+                OnAllBatteriesActivated?.Invoke();
+            }
         }
     }
 }

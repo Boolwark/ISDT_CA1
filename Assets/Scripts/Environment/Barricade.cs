@@ -13,7 +13,6 @@ namespace Environment
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
             playerLastPos = player.transform.position;
-            
         }
 
         private void LateUpdate()
