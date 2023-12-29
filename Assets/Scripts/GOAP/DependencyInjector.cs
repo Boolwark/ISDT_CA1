@@ -8,6 +8,8 @@ namespace GOAP
     public class DependencyInjector : GoapConfigInitializerBase,IGoapInjector
     {
         public AttackConfigSO AttackConfig;
+        public WanderConfigSO WanderConfig;
+        public HealingConfigSO HealConfig;
         public override void InitConfig(GoapConfig config)
         {
             config.GoapInjector = this;

@@ -2,13 +2,14 @@ using CrashKonijn.Goap.Behaviours;
 using CrashKonijn.Goap.Classes;
 using CrashKonijn.Goap.Enums;
 using CrashKonijn.Goap.Interfaces;
+using GOAP.config;
 using Unity.Mathematics;
 
 namespace GOAP.Actions
 {
-    public class WanderAction : ActionBase<CommonData>
+    public class WanderAction : ActionBase<CommonData>,IInjectable
     {
-       
+        private WanderConfigSO WanderConfig;
 
         public override void Created()
         {
@@ -17,7 +18,7 @@ namespace GOAP.Actions
 
         public override void Start(IMonoAgent agent, CommonData data)
         {
-            data.Timer = UnityEngine.Random.Range(1, 2);
+            data.Timer = UnityEngine.Random.Range(WanderConfig.WaitRangeBetweenWanders.x,WanderConfig.WaitRangeBetweenWanders.y);
          
         }
 
@@ -39,6 +40,11 @@ namespace GOAP.Actions
         public override void End(IMonoAgent agent, CommonData data)
         {
             
+        }
+
+        public void Inject(DependencyInjector injector)
+        {
+            WanderConfig = injector.WanderConfig;
         }
     }
     

@@ -8,6 +8,7 @@ using GOAP.Goals;
 using GOAP.Sensors;
 using GOAP.Targets;
 using GOAP.WorldKeys;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 namespace GOAP.Factories
@@ -36,6 +37,8 @@ namespace GOAP.Factories
             builder.AddGoal<WanderGoal>()
                 .AddCondition<IsWandering>(Comparison.GreaterThanOrEqual,1);
             builder.AddGoal<KillPlayer>().AddCondition<PlayerHealth>(Comparison.SmallerThanOrEqual, 0);
+            builder.AddGoal<HealGoal>().AddCondition<IsInjured>(Comparison.SmallerThanOrEqual, 0)
+                ;
         }
 
         private void BuildActions(GoapSetBuilder builder)
@@ -48,6 +51,7 @@ namespace GOAP.Factories
             builder.AddAction<MeleeAttackAction>().SetTarget<PlayerTarget>()
                 .AddEffect<PlayerHealth>(EffectType.Decrease).SetBaseCost(Injector.AttackConfig.MeleeAttackCost)
                 .SetInRange(Injector.AttackConfig.SensorRadius);
+            builder.AddAction<HealAction>().SetTarget<HealTarget>().AddEffect<IsInjured>(EffectType.Decrease).SetBaseCost(8).SetInRange(1);
         }
 
    
@@ -58,6 +62,7 @@ namespace GOAP.Factories
                 .SetTarget<WanderTarget>();
             builder.AddTargetSensor<PlayerTargetSensor>()
                 .SetTarget<PlayerTarget>();
+            builder.AddWorldSensor<InjuredSensor>().SetKey<IsInjured>();
         }
     }
 }

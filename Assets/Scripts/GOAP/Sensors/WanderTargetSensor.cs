@@ -1,6 +1,7 @@
 using CrashKonijn.Goap.Classes;
 using CrashKonijn.Goap.Interfaces;
 using CrashKonijn.Goap.Sensors;
+using GOAP.config;
 using UnityEngine;
 using UnityEngine.AI;
 using Vector2 = UnityEngine.Vector2;
@@ -8,8 +9,9 @@ using Vector3 = UnityEngine.Vector3;
 
 namespace GOAP.Sensors
 {
-    public class WanderTargetSensor : LocalTargetSensorBase
+    public class WanderTargetSensor : LocalTargetSensorBase,IInjectable
     {
+        private WanderConfigSO WanderConfig;
         public override void Created()
         {
             
@@ -49,6 +51,11 @@ namespace GOAP.Sensors
             Debug.Log("Cant find place to wander");
 
             return agent.transform.position;
+        }
+
+        public void Inject(DependencyInjector injector)
+        {
+            WanderConfig = injector.WanderConfig;
         }
     }
 }

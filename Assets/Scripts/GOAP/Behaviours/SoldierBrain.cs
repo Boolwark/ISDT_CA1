@@ -12,10 +12,15 @@ namespace GOAP.Behaviours
     {
         [SerializeField] private PlayerSensor PlayerSensor;
         [SerializeField] private AttackConfigSO AttackConfig;
+        [SerializeField] private HealingConfigSO HealingConfig;
+     
+        [SerializeField] private InjuredBehaviour InjuredBehaviour;
         private AgentBehaviour AgentBehaviour;
+        private bool IsPlayerInRange;
 
         private void Awake()
         {
+     
             AgentBehaviour = GetComponent<AgentBehaviour>();
         }
 
@@ -38,13 +43,40 @@ namespace GOAP.Behaviours
 
         private void PlayerSensorOnPlayerEnter(Transform player)
         {
-            AgentBehaviour.SetGoal<KillPlayer>(true);
+ 
+            IsPlayerInRange = true;
+            SetGoal();
         }
         private void PlayerSensorOnPlayerExit(Vector3 lastKnownPosition)
         {
-            AgentBehaviour.SetGoal<WanderGoal>(true);
+  
+            IsPlayerInRange = false;
+            SetGoal();
         }
 
-       
+        private void Update()
+        {
+           
+                SetGoal();
+            }
+
+        private void SetGoal()
+        {
+            if (InjuredBehaviour.StatsManager.GetCurrentHealth() < HealingConfig.AcceptableHPLimit)
+            {        AgentBehaviour.SetGoal<HealGoal>(false);   
+            
+            }
+            else if (InjuredBehaviour.StatsManager.GetCurrentHealth() >= HealingConfig.AcceptableHPLimit &&  IsPlayerInRange)
+            {
+                // must kill player if HP is not below threshold
+                AgentBehaviour.SetGoal<KillPlayer>(false);                
+            }
+            else if (InjuredBehaviour.StatsManager.GetCurrentHealth() >= HealingConfig.AcceptableHPLimit &&
+                !IsPlayerInRange)
+            {
+                
+                AgentBehaviour.SetGoal<WanderGoal>(false); 
+            }
+        }
     }
 }
