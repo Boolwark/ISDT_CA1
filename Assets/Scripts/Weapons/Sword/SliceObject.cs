@@ -18,6 +18,7 @@ namespace Weapons.Sword
         public LayerMask sliceableLayer;
         public float cutForce = 500f;
         private Rigidbody playerRB;
+        public float dissolveSpeed = 0.1f;
 
         public AbilityHolder abilityHolder;
         public DashAbility dashAbility;
@@ -75,8 +76,8 @@ namespace Weapons.Sword
                 Destroy(target);
                 FunctionTimer.Create(() =>
                 {
-                    DissolveManager.Instance.DissolveObject(upperHull.gameObject,0.5f);
-                    DissolveManager.Instance.DissolveObject(lowerHull.gameObject,0.5f);
+                    DissolveManager.Instance.DissolveObject(upperHull.gameObject,dissolveSpeed);
+                    DissolveManager.Instance.DissolveObject(lowerHull.gameObject,dissolveSpeed);
                 }, 1f);
             }
         }
