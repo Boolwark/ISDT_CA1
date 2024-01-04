@@ -386,19 +386,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42ac259ea9d4c6295630080e2a682a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 2
-  bullet: {fileID: 5382511031786639, guid: 4b499da298f814f0381efe4c2de9aa8c, type: 3}
+  gunData: {fileID: 11400000, guid: aab3db8ea6ea44b11bb0f44d6901d3ee, type: 2}
   spawnPoint: {fileID: 1474229073422721752}
-  fireSpeed: 20
-  recoilRecoverySpeed: 0.8
-  maxSpreadTime: 1
-  Spread: {x: 0.1, y: 0.1, z: 0.1}
   ammoDisplayCanvas: {fileID: 7081125906702809968}
-  recoilStrength: 1
-  nVibrations: 2
   ammoDisplayText: {fileID: 2757159222468751110}
   muzzleEffect: {fileID: 3850623862907874574}
-  rapidShootTime: 1
 --- !u!114 &112874178
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,13 +9,6 @@ namespace Weapons
     {
        
 
-        protected override void Start()
-        {
-            base.Start();
-        }
-        public override void FireBullet(ActivateEventArgs args)
-        {
-            base.FireBullet(args);
-        }
+    
     }
 }

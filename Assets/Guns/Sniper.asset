@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89be9c8e38f461dba740d0885f254b3, type: 3}
+  m_Name: Sniper
+  m_EditorClassIdentifier: 
+  magazineSize: 5
+  fireRate: 0.001
+  reloadDuration: 5
+  shotsPerFire: 1
+  nClips: 3
+  damage: 1000
+  recoilStrength: 6
+  nVibrations: 2
+  shakeDuration: 2
+  bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
+  fireSpeed: 5
+  recoilRecoverySpeed: 0.3
+  maxSpreadTime: 1
+  Spread: {x: 0.1, y: 0.1, z: 0.1}
