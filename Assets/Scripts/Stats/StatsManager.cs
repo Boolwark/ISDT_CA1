@@ -3,6 +3,7 @@ using CodeMonkey.Utils;
 using DefaultNamespace.ObjectPooling;
 using UnityEngine;
 using UnityEngine.Events;
+using Util;
 
 namespace Stats
 {
@@ -35,6 +36,8 @@ namespace Stats
                 // You can add any death logic here if needed
                 Debug.Log($"{gameObject.name} has died!");
                 LeaderboardManager.Instance.IncrementScore(killPoints);
+                var enemyType = GetEnemyType(gameObject.name);
+                ExportToCSV.Instance.RecordKill(enemyType);
                 if (TryGetComponent(out MeshRenderer meshRenderer))
                 {
                     meshRenderer.enabled = false;
@@ -47,6 +50,16 @@ namespace Stats
                 StartCoroutine(ReturnObjectToPool());
 
             }
+        }
+        private string GetEnemyType(string enemyName)
+        {
+            var name = gameObject.name.Split(" ")[0];
+            if (name.Contains("("))
+            {
+                return name.Substring(0, name.IndexOf("("));
+            }
+
+            return name;
         }
 
         private IEnumerator ReturnObjectToPool()
