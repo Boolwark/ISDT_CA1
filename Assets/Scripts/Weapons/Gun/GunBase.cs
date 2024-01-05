@@ -64,9 +64,17 @@ public class GunBase : MonoBehaviour
             recoilEffect.Activate(gunData.recoilStrength,gunData.nVibrations,gunData.shakeDuration);
         }
         GameObject spawnedBullet = Instantiate(gunData.bullet, spawnPoint.position, Quaternion.identity);
-        spawnedBullet.GetComponent<Rigidbody>().velocity = (spawnPoint.forward * gunData.fireSpeed) + GetSpread(rapidShootTime);
-        var bullet = spawnedBullet.GetComponent<Bullet>();
-        bullet.damage = gunData.damage; 
+        if (spawnedBullet.TryGetComponent(out Rigidbody rb))
+        {
+            rb.velocity = (spawnPoint.forward * gunData.fireSpeed) + GetSpread(rapidShootTime);
+        }
+
+        if (spawnedBullet.TryGetComponent(out Bullet bullet))
+        {
+            bullet.damage = gunData.damage; 
+        }
+      
+  
         muzzleEffect.Play();
         AudioManager.Instance.PlaySFX("GunShot");
         Destroy(spawnedBullet, 5);

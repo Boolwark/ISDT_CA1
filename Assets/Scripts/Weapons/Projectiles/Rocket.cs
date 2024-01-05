@@ -20,7 +20,6 @@ namespace Weapons.Projectiles
         {
             rb = GetComponent<Rigidbody>();
             rb.velocity = rb.transform.forward * rocketSpeed;
-       
         }
 
       

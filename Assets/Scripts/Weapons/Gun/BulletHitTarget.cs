@@ -5,6 +5,7 @@ namespace Weapons
     public class BulletHitTarget : MonoBehaviour
     {
         public GameObject[] bulletHoles;
+        public string soundEffect;
 
         void OnCollisionEnter(Collision collision)
         {
@@ -18,6 +19,7 @@ namespace Weapons
                 var bulletHole = Instantiate(bulletHoles[bulletHolesIndex], contact.point, Quaternion.identity * Quaternion.Euler(0,0,bulletHolesIndex * 45f));
                 Destroy(bulletHole,3f);
             }
+            AudioManager.Instance.PlaySFX(soundEffect);
         }
     }
 }
