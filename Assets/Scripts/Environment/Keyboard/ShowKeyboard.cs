@@ -16,8 +16,10 @@ namespace Environment.Keyboard
 
         public void OpenKeyboard()
         {
+            Debug.Log("Opening keyboard");
             NonNativeKeyboard.Instance.InputField = inputField;
-            NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);   
+            NonNativeKeyboard.Instance.PresentKeyboard(inputField.text);  
+    
         }
     }
 }

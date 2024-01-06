@@ -3,29 +3,33 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public class SerpentAgent : MonoBehaviour
+    public class LabAI : MonoBehaviour
     {
-        public MeleeEnemyAI meleeEnemyAI;
         private bool isFadingIn;
         public DissolveController[] dissolveControllers;
+        public GameObject dialog;
         private void Start()
         {
-            meleeEnemyAI.enabled = false;
+      
         }
-        private void OnTriggerEnter(Collider other)
+
+        public void AppearAndGiveHint()
         {
             // Check if the object entering the collider is the player
-            if (other.CompareTag("Player"))
-            {
+          
                 // Start the dissolve effect
                 foreach (var dissolveController in dissolveControllers)
                 {
-                    dissolveController.ReverseDissolving();
+                    dissolveController.OnFadeInEnd.AddListener(ShowDialog);
+                    dissolveController.StartFadingIn();
+                    
                 }
-            }
+                Debug.Log("Giving hint.");
+        }
 
-            meleeEnemyAI.enabled = true;
-            Debug.Log(transform.name + "is now attacking player");
+        private void ShowDialog()
+        {
+            dialog.SetActive(true);
         }
     }
 }

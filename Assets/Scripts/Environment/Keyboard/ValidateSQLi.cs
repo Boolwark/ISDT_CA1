@@ -11,6 +11,8 @@ namespace Environment.Keyboard
         public TMP_InputField InputField;
         public GameObject successPanel, failPanel;
         public UnityEvent OnSucceed;
+        public UnityEvent OnThreeFailedAttempts;
+        private int nWrongAttempts = 0;
         public void OnInputEntered()
         {
             string input = InputField.text;
@@ -21,10 +23,16 @@ namespace Environment.Keyboard
             {
                 Debug.Log("Successful SQLi");
                 DisplayResultPanel(true);
+                nWrongAttempts = 0;
             }
             else
             {
                 DisplayResultPanel(false);
+                nWrongAttempts++;
+                if (nWrongAttempts == 3)
+                {
+                    OnThreeFailedAttempts?.Invoke();
+                }
             }
         }
 

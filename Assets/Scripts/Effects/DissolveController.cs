@@ -12,7 +12,8 @@ public class DissolveController : MonoBehaviour
     public float minDissolve = -2f;
     public float maxDissolve = 1.2f;
     public UnityEvent OnFadeOutEnd;
-        
+    public UnityEvent OnFadeInEnd;
+
 
     void Start()
     {
@@ -65,6 +66,7 @@ public class DissolveController : MonoBehaviour
         }
 
         isDissolving = false; // The effect is complete, allow it to be triggered again
+        OnFadeInEnd?.Invoke();
     }
 
     // Optionally, you could have a method to reverse the dissolve effect
