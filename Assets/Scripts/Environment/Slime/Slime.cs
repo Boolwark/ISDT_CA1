@@ -15,7 +15,7 @@ namespace Environment.Slime
     public class Slime : MonoBehaviour
     {
         private bool trapped = false;
-        public Material material;
+        public Renderer renderer;
         public float trapDuration = 2f;
         private float timeSinceLastTrap = 0f;
         public float range = 0.1f;
@@ -32,7 +32,7 @@ namespace Environment.Slime
         private Transform playerBody;
         private void Start()
         {
-            initColor = material.GetVector("_Tint");
+            initColor = renderer.material.GetVector("_Tint");
             playerMP = FindObjectOfType<ActionBasedContinuousMoveProvider>();
             playerBody = FindObjectOfType<Player.Player>().transform;
             InvokeRepeating(nameof(UpdateDestination),0f,updateDestinationRate);
@@ -86,7 +86,7 @@ namespace Environment.Slime
                 timeElapsed += Time.deltaTime;
                 Debug.Log("Trapping player");
                 playerBody.transform.position = initPos;
-                material.SetVector("_Tint",Color.Lerp(initColor, Color.black, timeElapsed));
+                renderer.material.SetVector("_Tint",Color.Lerp(initColor, Color.black, timeElapsed));
                 yield return null;
             }
 

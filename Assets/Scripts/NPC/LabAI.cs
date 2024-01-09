@@ -1,5 +1,7 @@
 using System;
+using TMPro;
 using UnityEngine;
+using Util.DialogSystem;
 
 namespace Enemy
 {
@@ -7,7 +9,8 @@ namespace Enemy
     {
         private bool isFadingIn;
         public DissolveController[] dissolveControllers;
-        public GameObject dialog;
+        public TMP_Text textUI;
+        public DialogController dialogController;
         private void Start()
         {
       
@@ -18,6 +21,7 @@ namespace Enemy
             // Check if the object entering the collider is the player
           
                 // Start the dissolve effect
+            
                 foreach (var dissolveController in dissolveControllers)
                 {
                     dissolveController.OnFadeInEnd.AddListener(ShowDialog);
@@ -29,7 +33,7 @@ namespace Enemy
 
         private void ShowDialog()
         {
-            dialog.SetActive(true);
+            dialogController.PlayDialog(textUI);
         }
     }
 }

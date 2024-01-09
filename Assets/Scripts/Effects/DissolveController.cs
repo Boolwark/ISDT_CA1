@@ -6,7 +6,7 @@ public class DissolveController : MonoBehaviour
 {
     private bool isVisible = false;
     public float dissolveSpeed = 0.5f; // Speed of the dissolve effect
-    public Material dissolveMaterial;
+    public Renderer renderer;
     private bool isDissolving = false;
     private float dissolveValue;
     public float minDissolve = -2f;
@@ -27,7 +27,7 @@ public class DissolveController : MonoBehaviour
 
     public void SetDissolveMaterial(Material material,bool startFromMax)
     {
-        this.dissolveMaterial = material;
+        this.renderer.material = material;
         dissolveValue = startFromMax ? maxDissolve : minDissolve;
         material.SetFloat("_Dissolve", dissolveValue);
     }
@@ -59,7 +59,7 @@ public class DissolveController : MonoBehaviour
             dissolveValue = Mathf.Clamp(dissolveValue,minDissolve, maxDissolve);
 
             // Update the material's dissolve float property
-            dissolveMaterial.SetFloat("_Dissolve", dissolveValue);
+            this.renderer.material.SetFloat("_Dissolve", dissolveValue);
 
             // Wait until the next frame
             yield return null;
@@ -91,7 +91,7 @@ public class DissolveController : MonoBehaviour
             dissolveValue = Mathf.Clamp(dissolveValue,minDissolve, maxDissolve);
 
 
-            dissolveMaterial.SetFloat("_Dissolve", dissolveValue);
+            renderer.material.SetFloat("_Dissolve", dissolveValue);
 
        
             yield return null;
