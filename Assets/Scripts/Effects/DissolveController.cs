@@ -18,6 +18,10 @@ public class DissolveController : MonoBehaviour
     void Start()
     {
         dissolveValue = minDissolve;
+        if (renderer==null)
+        {
+            renderer = GetComponent<Renderer>();
+        }
         // Get the material of the GameObject this script is attached to
         //dissolveMaterial = GetComponent<Renderer>().material;
 

@@ -42,7 +42,10 @@ namespace Environment.Keyboard
           
             currentPanel.SetActive(true);
                 FunctionTimer.Create(() => { currentPanel.SetActive(false);}, 2f);
-                OnSucceed?.Invoke();
+                if (success)
+                {
+                    OnSucceed?.Invoke();
+                }
         }
     }
 }

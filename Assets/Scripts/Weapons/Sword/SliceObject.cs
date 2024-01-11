@@ -76,8 +76,8 @@ namespace Weapons.Sword
                 Destroy(target);
                 FunctionTimer.Create(() =>
                 {
-                    DissolveManager.Instance.DissolveObject(upperHull.gameObject,dissolveSpeed);
-                    DissolveManager.Instance.DissolveObject(lowerHull.gameObject,dissolveSpeed);
+                   // DissolveManager.Instance.DissolveObject(upperHull.gameObject,dissolveSpeed);
+                    //DissolveManager.Instance.DissolveObject(lowerHull.gameObject,dissolveSpeed);
                 }, 1f);
             }
         }
