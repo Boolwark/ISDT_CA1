@@ -12,7 +12,7 @@ namespace Weapons.PropellerGun
         public float attractSpeed = 5f;
         public LayerMask whatIsEnemy;
         public float angle;
-        public ParticleSystem chargeEffect;
+        public ParticleSystem[] chargeEffects;
         public void Activate()
         {
            
@@ -37,10 +37,17 @@ namespace Weapons.PropellerGun
         {
             if (!spinBlades)
             {
-                chargeEffect.Stop();
+                foreach (var chargeEffect in chargeEffects)
+                {
+                    chargeEffect.Stop();
+                }
+           
                 return;
             }
-            chargeEffect.Play();
+            foreach (var chargeEffect in chargeEffects)
+            {
+                chargeEffect.Play();
+            }
             foreach (Collider enemy in Physics.OverlapSphere(transform.position, range, whatIsEnemy))
             {
                 Debug.Log("Attracting " + enemy.name);

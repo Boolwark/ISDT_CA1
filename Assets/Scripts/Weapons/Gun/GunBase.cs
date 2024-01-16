@@ -71,6 +71,7 @@ public class GunBase : MonoBehaviour
 
         if (spawnedBullet.TryGetComponent(out Bullet bullet))
         {
+            
             bullet.damage = gunData.damage; 
         }
       
