@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Ability;
 using DG.Tweening;
 using UI;
@@ -11,7 +12,7 @@ namespace Weapons
     {
         public Transform rightHand;
         public LayerMask whatIsReversible;
-        public float range;
+        public float range,launchForce;
         public GameObject[] fingers;
         public Vector3 rotation;
         public float clenchDuration=0.5f;
@@ -19,7 +20,7 @@ namespace Weapons
         public Ability.Ability UltrahandGrappleAbility;
         private AbilityHolder _abilityHolder;
         private HealEffect _healEffect;
-
+        private List<TelekineticProjectile> heldProjectiles = new();
         private void Start()
         {
             _abilityHolder = FindObjectOfType<AbilityHolder>();
@@ -34,7 +35,12 @@ namespace Weapons
         }
         public void OnActivate()
         {
-            _healEffect.TriggerVignetteEffect();   
+            _healEffect.TriggerVignetteEffect();
+            foreach (var heldProjectile in heldProjectiles)
+            {
+                heldProjectile.Launch(launchForce);
+            }
+            heldProjectiles.Clear();
             transform.parent = rightHand;
             foreach (var fingers in fingers)
             {
@@ -43,7 +49,17 @@ namespace Weapons
 
             foreach (var collider in  Physics.OverlapSphere(transform.position,range,whatIsReversible))
             {
-                collider.GetComponent<Reversible>().Reverse();
+                if (collider.TryGetComponent(out Reversible reversible))
+                {
+                    reversible.Reverse();
+                }
+                if (collider.TryGetComponent(out TelekineticProjectile tp))
+                {
+                    if (tp.isLaunching) continue;
+                    tp.Activate(transform);
+                    heldProjectiles.Add(tp);
+                }
+       
             }
 
             
