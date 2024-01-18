@@ -29,11 +29,7 @@ namespace UI
 
             private void Update()
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    Debug.Log("Damaging player");
-                    TriggerVignetteEffect();
-                }
+               
             }
 
             public void TriggerVignetteEffect()

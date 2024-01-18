@@ -1,4 +1,8 @@
+using System;
+using Ability;
 using DG.Tweening;
+using UI;
+using UI.UI.DefaultNamespace.GameUI;
 using UnityEngine;
 
 namespace Weapons
@@ -11,8 +15,26 @@ namespace Weapons
         public GameObject[] fingers;
         public Vector3 rotation;
         public float clenchDuration=0.5f;
+        private Ability.Ability oldAbility;
+        public Ability.Ability UltrahandGrappleAbility;
+        private AbilityHolder _abilityHolder;
+        private HealEffect _healEffect;
+
+        private void Start()
+        {
+            _abilityHolder = FindObjectOfType<AbilityHolder>();
+            _healEffect = FindObjectOfType<HealEffect>();
+        }
+
+     
+        public void OnSelect()
+        {
+            _abilityHolder.ability = UltrahandGrappleAbility;
+       
+        }
         public void OnActivate()
         {
+            _healEffect.TriggerVignetteEffect();   
             transform.parent = rightHand;
             foreach (var fingers in fingers)
             {

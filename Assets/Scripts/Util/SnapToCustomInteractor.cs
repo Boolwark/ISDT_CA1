@@ -12,16 +12,13 @@ namespace Util
             {
                 if (collider.TryGetComponent(out CustomXRSocketInteractor interactor))
                 {
-                    transform.SetParent(interactor.transform);
+                    interactor.AttachToTransform(transform);
                     Debug.Log("Snapping");
-                    transform.localPosition = Vector3.zero;
-                    transform.localRotation = Quaternion.identity;
+                   
                     if (TryGetComponent(out Rigidbody rb))
                     {
                         rb.isKinematic = true;
                     }
-             
-                    
                 }
             }
         }

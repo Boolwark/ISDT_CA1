@@ -43,7 +43,7 @@ public class C4Explosive : MonoBehaviour
         {
             if (hitCollider.TryGetComponent(out CustomXRSocketInteractor customXRSocketInteractor))
             {
-                transform.SetParent(customXRSocketInteractor.attachTransform);
+              customXRSocketInteractor.AttachToTransform(transform);
                 transform.localPosition = Vector3.zero;
                 Invoke("Explode", countdown);
                 break;

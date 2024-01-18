@@ -1,6 +1,7 @@
 using System.Collections;
 using CodeMonkey.Utils;
 using DefaultNamespace.ObjectPooling;
+using Effects;
 using UnityEngine;
 using UnityEngine.Events;
 using Util;
@@ -102,6 +103,10 @@ namespace Stats
         public float GetCurrentHealth()
         {
             return HP;
+        }
+        public void ExplodeOnDeath()
+        {
+            ExplosionManager.Instance.SpawnExplosion(transform.position,transform.rotation);
         }
     }
 

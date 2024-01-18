@@ -3,6 +3,7 @@ using DG.Tweening;
 using Effects;
 using Stats;
 using UnityEngine;
+using Weapons;
 
 namespace Vehicles
 {
@@ -19,7 +20,7 @@ namespace Vehicles
             public Transform[] firePositions;
             public float distanceOffset = 3f;
             public float damageOnUse=5f;
-            public float shootForce,throwForce;
+            public float bulletSpeed,throwForce;
 
             private enum State
             {
@@ -93,10 +94,12 @@ namespace Vehicles
                     bulletGO.transform.forward = transform.forward;
                     if (bulletGO.TryGetComponent(out Rigidbody rb))
                     {
-                        rb.isKinematic = false;
-                            rb.AddForce(transform.forward * shootForce,ForceMode.Force);
+                        if (currentState == State.CONTROLLED)
+                        {
+                            bulletGO.GetComponent<Bullet>().enemyTag = "Enemy";
+                        }
+                        rb.velocity = (currentState==State.CONTROLLED?transform.forward:(playerTransform.position - bulletGO.transform.position).normalized * bulletSpeed);
                         
-                     
                     }
                 }
               

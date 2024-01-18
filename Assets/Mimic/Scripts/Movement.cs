@@ -29,19 +29,16 @@ namespace MimicSpace
        
         void Update()
         {
-            // Calculate the desired position with offset from the player
+      
             Vector3 desiredPosition = playerTransform.position + offset;
 
-            // Calculate the direction and velocity to get to the desired position
+            
             velocity = Vector3.Lerp(velocity, (desiredPosition - transform.position).normalized * speed, velocityLerpCoef * Time.deltaTime);
-
-            // Assigning velocity to the mimic to assure great leg placement
+            
             myMimic.velocity = velocity;
 
-            // Move the GameObject towards the desired position
-            transform.position += velocity * Time.deltaTime;
 
-            // Ensure that the GameObject maintains a certain height above the ground
+            transform.position += velocity * Time.deltaTime;
             RaycastHit hit;
             Vector3 destHeight = transform.position;
             if (Physics.Raycast(transform.position + Vector3.up * 5f, -Vector3.up, out hit))
