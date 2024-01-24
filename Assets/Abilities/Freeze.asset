@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934c9e6940af4dcb95ba2cd7272f5976, type: 3}
+  m_Name: Freeze
+  m_EditorClassIdentifier: 
+  name: Freeze
+  cooldownTime: 1
+  activeTime: 1
+  damage: 100
+  aoeEffectEase: 1
+  radius: 30
+  AOEPf: {fileID: 4932088507883938021, guid: 0e5709a7ddb77924090c112cf73bb98a, type: 3}
+  duration: 5
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 128
+  elementalEffectPf: {fileID: 2579253259113131599, guid: 8cc57eeb8d4c44b419969a9a6ec7881a,
+    type: 3}

@@ -20,12 +20,12 @@ namespace Ability.Abilities
             public float range = 5f;
 
             public LayerMask whatIsReversible;
-            private HealEffect _healEffect;
+            private VignetteEffect _healEffect;
             public override void Activate(GameObject parent)
             {
                 if (_healEffect == null)
                 {
-                    _healEffect = parent.GetComponentInChildren<HealEffect>();
+                    _healEffect = parent.GetComponentInChildren<VignetteEffect>();
                 }
                 _healEffect.TriggerVignetteEffect();
                 foreach (var heldProjectile in heldProjectiles)

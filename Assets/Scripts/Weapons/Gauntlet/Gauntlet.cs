@@ -19,12 +19,12 @@ namespace Weapons
         private Ability.Ability oldAbility;
         public Ability.Ability UltrahandGrappleAbility;
         private AbilityHolder _abilityHolder;
-        private HealEffect _healEffect;
+        private VignetteEffect _healEffect;
         private List<TelekineticProjectile> heldProjectiles = new();
         private void Start()
         {
             _abilityHolder = FindObjectOfType<AbilityHolder>();
-            _healEffect = FindObjectOfType<HealEffect>();
+            _healEffect = FindObjectOfType<VignetteEffect>();
         }
 
      
