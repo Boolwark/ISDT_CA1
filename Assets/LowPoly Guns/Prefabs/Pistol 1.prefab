@@ -265,6 +265,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1579373167}
+  - {fileID: 29402434}
   m_Father: {fileID: 3263699454365990613}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -422,8 +423,10 @@ GameObject:
   - component: {fileID: 4396025059160950202}
   - component: {fileID: 9195615305045848528}
   - component: {fileID: 468620192}
-  - component: {fileID: 468620196}
   - component: {fileID: 468620197}
+  - component: {fileID: 468620190}
+  - component: {fileID: 468620191}
+  - component: {fileID: 468620195}
   m_Layer: 0
   m_Name: Pistol 1
   m_TagString: Untagged
@@ -529,24 +532,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &468620196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2738520558268228719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ebcae9ece66451987b4e64d605710e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
-  spawnPoint: {fileID: 1503825986}
-  fireSpeed: 100
-  ammoDisplayCanvas: {fileID: 1474200263}
-  ammoDisplayText: {fileID: 1474200259}
-  muzzleEffect: {fileID: 1579373165}
 --- !u!114 &468620197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,10 +561,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 468620190}
+        m_TargetAssemblyTypeName: UI.OutlineOnHover, Assembly-CSharp
+        m_MethodName: OnHover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 468620190}
+        m_TargetAssemblyTypeName: UI.OutlineOnHover, Assembly-CSharp
+        m_MethodName: OnHoverExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -662,5 +671,129 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  enableMovement: 0
   leftAttachTransform: {fileID: 0}
   rightAttachTransform: {fileID: 0}
+--- !u!114 &468620190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738520558268228719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89b2a3267fd4a4a871692e01e08d2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOutlineColor: {r: 0, g: 1, b: 0.9600265, a: 0}
+--- !u!114 &468620191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738520558268228719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.03796029, g: 1, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &468620195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738520558268228719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d450da27334ba49075a002020db04c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunData: {fileID: 11400000, guid: 493ceabd0beb54f2a8c0721390a171f5, type: 2}
+  spawnPoint: {fileID: 1503825986}
+  ammoDisplayCanvas: {fileID: 1474200263}
+  ammoDisplayText: {fileID: 1474200259}
+  muzzleEffect: {fileID: 0}
+--- !u!1001 &5045376339414348068
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1503825986}
+    m_Modifications:
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000029502786
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597446, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Name
+      value: MuzzleEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 981993c36dcbe43b18597997c1a84e3f, type: 3}
+--- !u!4 &29402434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5045376339418502246, guid: 981993c36dcbe43b18597997c1a84e3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5045376339414348068}
+  m_PrefabAsset: {fileID: 0}

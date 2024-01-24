@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 namespace Ability.Abilities
 {
     [CreateAssetMenu]
-    public class DashAbility : Ability
+    public class DashAbility : global::Ability.Ability
     {
         public float dashVelocity;
         public float normalVelocity = 10;

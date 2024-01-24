@@ -18,6 +18,7 @@ public class AnimateHandOnInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(pinchAnimationAction.action.name + "Is activated");
         float triggerValue = pinchAnimationAction.action.ReadValue<float>();
         handAnimator.SetFloat("Trigger",triggerValue);
         float gripValue = gripAnimationAction.action.ReadValue<float>();

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Ability.Abilities
 {
     [CreateAssetMenu]
-    public class GrapplingAbility : Ability
+    public class GrapplingAbility : global::Ability.Ability
     {
         public float reachedDistance = 2f;
         public float hookSpeed = 10f;

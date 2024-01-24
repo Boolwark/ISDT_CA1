@@ -9,7 +9,7 @@ using UnityEngine.Pool;
 namespace Ability.Abilities
 {
     [CreateAssetMenu]
-    public class WebAbility : Ability
+    public class WebAbility : global::Ability.Ability
     {
         [SerializeField] private GameObject webProjectilePrefab; // Attach this in the inspector
       

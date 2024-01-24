@@ -16,8 +16,10 @@ namespace Environment
         {
     
             index = ClampIndex(index);
-            Debug.Log("Current index is"+index);
-            Debug.Log("Adding"+obj.name + "to INVENTORY");
+            if (nameToIndex.ContainsKey(obj.name))
+            {
+                return;
+            }
             nameToIndex.Add(obj.name,index);
             obj.parent = attachTransforms[index];
             obj.localPosition = Vector3.zero;

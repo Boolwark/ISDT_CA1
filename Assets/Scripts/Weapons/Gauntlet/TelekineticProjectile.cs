@@ -26,6 +26,7 @@ namespace Weapons
         }
         public void Activate(Transform target)
         {
+            transform.parent = target;
             isLevitating = true;
             this.target = target;
             rb.isKinematic = true;

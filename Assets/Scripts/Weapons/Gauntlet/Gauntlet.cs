@@ -35,32 +35,7 @@ namespace Weapons
         }
         public void OnActivate()
         {
-            _healEffect.TriggerVignetteEffect();
-            foreach (var heldProjectile in heldProjectiles)
-            {
-                heldProjectile.Launch(launchForce);
-            }
-            heldProjectiles.Clear();
-            transform.parent = rightHand;
-            foreach (var fingers in fingers)
-            {
-                fingers.transform.DORotate(transform.rotation.eulerAngles + rotation, clenchDuration).SetEase(Ease.Linear);
-            }
-
-            foreach (var collider in  Physics.OverlapSphere(transform.position,range,whatIsReversible))
-            {
-                if (collider.TryGetComponent(out Reversible reversible))
-                {
-                    reversible.Reverse();
-                }
-                if (collider.TryGetComponent(out TelekineticProjectile tp))
-                {
-                    if (tp.isLaunching) continue;
-                    tp.Activate(transform);
-                    heldProjectiles.Add(tp);
-                }
-       
-            }
+           
 
             
         }

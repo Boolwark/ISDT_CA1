@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Ability.Abilities
 { [CreateAssetMenu]
-    public class ReflexAbility : Ability
+    public class ReflexAbility : global::Ability.Ability
     {
         public GameObject grayScreenPrefab;
         private GameObject currentGrayScreen;
