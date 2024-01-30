@@ -14,24 +14,31 @@ namespace Ability.Abilities
     [CreateAssetMenu]
     public class ElementalAbility : global::Ability.Ability
     {
+        private Vector3 aoeInitScale;
         public float damage = 100f;
-     
+        public Color effectColor;
         public Ease aoeEffectEase;
         public float radius;
         private VignetteEffect EffectUI;
         public GameObject AOEPf;
         public float duration;
         public LayerMask whatIsEnemy;
+        private bool isActive = false;
         public GameObject elementalEffectPf;
         public override void Activate(GameObject parent)
         {
+            if (isActive) return;
             if (EffectUI == null)
             {
                 EffectUI = parent.GetComponentInChildren<VignetteEffect>();
-                EffectUI.ChangeColor(Color.cyan);
+                EffectUI.ChangeColor(effectColor);
             }
+
+            isActive = true;
+            Debug.Log("activate ability");
             EffectUI.TriggerVignetteEffect();
-            PlayFreezeAOEEffect(parent.transform);
+            aoeInitScale = AOEPf.transform.localScale;
+            PlayAOEEffect(parent.transform);
            
      
               
@@ -49,16 +56,17 @@ namespace Ability.Abilities
 
         public override void BeginCooldown(GameObject parent)
         {
-         
+            isActive = false;
         }
 
-        private void PlayFreezeAOEEffect(Transform parent)
+        private void PlayAOEEffect(Transform parent)
         {
-            var freezeAOE = ObjectPoolManager.SpawnObject(AOEPf, parent.transform.position, parent.transform.rotation);
-            freezeAOE.transform.DOScale(freezeAOE.transform.localScale * radius,duration).SetEase(aoeEffectEase).OnComplete(
+            var aoe = ObjectPoolManager.SpawnObject(AOEPf, parent.transform.position, parent.transform.rotation);
+            aoe.transform.DOScale(AOEPf.transform.localScale * radius,duration).SetEase(aoeEffectEase).OnComplete(
                 () =>
                 {
-                    ObjectPoolManager.ReturnObjectToPool(freezeAOE);
+                    aoe.transform.localScale = aoeInitScale;
+                    ObjectPoolManager.ReturnObjectToPool(aoe);
                 });
         }
     }

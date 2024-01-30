@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 /// <summary>
 /// XR teleportation anchor keeps clipping player below the ground surface. Attach script to player gameObject to
@@ -10,17 +12,21 @@ public class KeepPlayerAboveGround : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private LayerMask whatIsGround;
-    void Start()
+    public float offset = 0.3f;
+    private Transform player;
+
+    private void Start()
     {
-        
+        player = FindObjectOfType<Player.Player>().transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPlayerTeleport(SelectExitEventArgs t)
     {
-        if (!Physics.Raycast(transform.position, -transform.up, 5f, whatIsGround))
-        {
-            transform.position = new(transform.position.x,transform.position.y + 1f,transform.position.z);
-        }
+        player.transform.position = new Vector3(player.transform.position.x, transform.position.y + offset,
+            player.transform.position.z);
     }
 }
+// Update is called once per frame
+    
+
+

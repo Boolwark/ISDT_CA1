@@ -12,14 +12,14 @@ namespace Effects.Elements
 
         public override void Activate()
         {
-          
+            
             _meshDestroy = transform.parent.AddComponent<MeshDestroy>();
             _meshDestroy.CutCascades = cutCascades;
             _meshDestroy.ExplodeForce = breakForce;
             base.Activate();
             base.sm.TakeDamage(damage);
         }
-        protected override void DeathEffect()
+        protected new void DeathEffect()
         {
             _meshDestroy.DestroyMesh();
             base.DeathEffect();

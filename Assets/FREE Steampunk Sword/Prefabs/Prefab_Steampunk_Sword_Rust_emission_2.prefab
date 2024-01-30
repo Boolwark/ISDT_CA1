@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 758900385}
   - component: {fileID: 758900386}
   - component: {fileID: 758900387}
+  - component: {fileID: 758900380}
   m_Layer: 0
   m_Name: Prefab_Steampunk_Sword_Rust_emission_2
   m_TagString: Untagged
@@ -368,6 +369,7 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+  enableMovement: 0
   leftAttachTransform: {fileID: 0}
   rightAttachTransform: {fileID: 0}
 --- !u!114 &758900387
@@ -391,5 +393,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   cutForce: 5
+  dissolveSpeed: 0.1
   abilityHolder: {fileID: 0}
   dashAbility: {fileID: 11400000, guid: 2c3a018c9531f4f6e8422941dd93bf97, type: 2}
+--- !u!114 &758900380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774497712423984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

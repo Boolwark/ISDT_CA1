@@ -28,6 +28,7 @@ namespace Stats
             Debug.Log(name + "has taken damage");
             OnDamageTaken?.Invoke();
             HP -= damageAmount;
+            DamagePopupManager.Instance.CreatePopUp(damageAmount.ToString(),transform.position,Quaternion.identity);
 
             // Ensure HP doesn't go below 0
             if (HP < 0 && !isDead)

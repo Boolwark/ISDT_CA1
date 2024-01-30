@@ -96,7 +96,8 @@ namespace Vehicles
                     {
                         if (currentState == State.CONTROLLED)
                         {
-                            bulletGO.GetComponent<Bullet>().enemyTag = "Enemy";
+                            var bullet = bulletGO.GetComponent<Bullet>();
+                            bullet.enemyTags.Add("Enemy");
                         }
                         rb.velocity = (currentState==State.CONTROLLED?transform.forward:(playerTransform.position - bulletGO.transform.position).normalized * bulletSpeed);
                         

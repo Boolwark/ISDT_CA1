@@ -20,5 +20,12 @@ namespace Effects
             AudioManager.Instance.PlaySFX("Explosion");
             Destroy(spawnedExplosion,explosionDuration);
         }
+        public void SpawnExplosionWithPrefab(Vector3 position, Quaternion rotation,GameObject effectPf)
+        {
+            var spawnedExplosion = ObjectPoolManager.SpawnObject(effectPf, position, rotation);
+            spawnedExplosion.transform.DOScale(spawnedExplosion.transform.localScale * 3f, 0.5f).SetEase(Ease.OutExpo);
+            AudioManager.Instance.PlaySFX("Explosion");
+            Destroy(spawnedExplosion,explosionDuration);
+        }
     }
 }

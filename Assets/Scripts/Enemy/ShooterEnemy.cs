@@ -34,7 +34,7 @@ namespace Enemy
         public float sightRange, attackRange;
         public bool playerInSightRange, playerInAttackRange;
 
-        void Awake()
+        public void Awake()
         {
             player = GameObject.Find("Player").transform;
             agent = GetComponent<NavMeshAgent>();
@@ -74,7 +74,7 @@ namespace Enemy
 
             walkPoint = new Vector3(transform.position.x + randomX, transform.position.y,
                 transform.position.z + randomZ);
-            if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+            if (Physics.Raycast(walkPoint, -transform.up, 10f, whatIsGround))
             {
                 walkPointSet = true;
             }

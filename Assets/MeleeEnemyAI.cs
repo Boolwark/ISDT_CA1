@@ -2,6 +2,8 @@
 using Stats;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
+
 /// <summary>
 /// This Enemy AI chases both the player and NPC characters. (Tagged with Player and NPC respectively)
 /// </summary>
@@ -10,8 +12,8 @@ public class MeleeEnemyAI : MonoBehaviour
     private Transform target;
     private NavMeshAgent agent;
     private Animator animator;
-    public Core core;
-
+   
+    public bool isCorePresent = true;
     public float chaseRange = 5.0f;
     public float attackRange = 1.5f;
     public float fovAngle = 60f;
@@ -24,7 +26,9 @@ public class MeleeEnemyAI : MonoBehaviour
     private float stationaryTimeThreshold = 3f;
     private float timeSinceLastMove;
     private StatsManager _statsManager;
-
+    public UnityEvent OnPlayerDetected;
+    private Transform playerTr;
+    
 
     private enum State
     {
@@ -36,12 +40,14 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private State state;
 
-    private void Start()
+     protected void Start()
     {
+        playerTr = FindObjectOfType<Player.Player>().transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        Debug.Log("Animator is null" + animator==null);
         _statsManager = GetComponent<StatsManager>();
-        core = FindObjectOfType<Core>();
+
 
         lastPosition = transform.position;
         timeSinceLastMove = 0f;
@@ -51,6 +57,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("Current state is" + state);
         switch (state)
         {
             case State.Idle:
@@ -69,6 +76,13 @@ public class MeleeEnemyAI : MonoBehaviour
                 AttackTarget();
                 break;
         }
+    }
+
+    public void OnAttacked()
+    {
+        // immedieltly attack the player when attacked. 
+        target = playerTr;
+        state = State.Chase;
     }
      private void ChaseTarget()
     {
@@ -96,7 +110,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
-        if (target != null )
+        if (target != null && target != transform)
         {
             agent.ResetPath();
             animator.SetTrigger("attack");
@@ -134,6 +148,7 @@ public class MeleeEnemyAI : MonoBehaviour
         Vector3 directionToTarget = (target.position - transform.position).normalized;
         float angleBetweenEnemyAndTarget = Vector3.Angle(transform.forward, directionToTarget);
 
+        
         return angleBetweenEnemyAndTarget < fovAngle / 2f;
     }
 
@@ -159,11 +174,12 @@ public class MeleeEnemyAI : MonoBehaviour
         target = closestTarget;
         if (target != null)
         {
+            OnPlayerDetected?.Invoke();
             state = State.Chase;
         }
         else
         {
-            target = core.transform;
+            target = transform;
         }
     }
     private void CheckIfStuck()

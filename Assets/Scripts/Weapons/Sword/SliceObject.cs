@@ -3,6 +3,7 @@ using Ability;
 using Ability.Abilities;
 using CodeMonkey.Utils;
 using EzySlice;
+using Stats;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Util;
@@ -54,11 +55,7 @@ namespace Weapons.Sword
             abilityHolder.ability = dashAbility;
             
         }
-        public void OnDeSelect()
-        {
-            abilityHolder.ability = oldAbility;
-            playerRB.isKinematic = false;
-        }
+     
 
         public void Slice(GameObject target)
         {
@@ -67,6 +64,11 @@ namespace Weapons.Sword
             planeNormal.Normalize();
             
             SlicedHull hull = target.Slice(endSlicePoint.position,planeNormal);
+            if (target.TryGetComponent(out StatsManager sm))
+            {
+                Debug.Log("Death by slashing");
+                sm.TakeDamage(99999);
+            }
             if (hull != null)
             {
                 GameObject upperHull = hull.CreateUpperHull(target,crossSectionMaterial);
@@ -74,11 +76,7 @@ namespace Weapons.Sword
                 SetupSlicedComponent(upperHull);
                 SetupSlicedComponent(lowerHull);
                 Destroy(target);
-                FunctionTimer.Create(() =>
-                {
-                   // DissolveManager.Instance.DissolveObject(upperHull.gameObject,dissolveSpeed);
-                    //DissolveManager.Instance.DissolveObject(lowerHull.gameObject,dissolveSpeed);
-                }, 1f);
+             
             }
         }
 

@@ -74,7 +74,8 @@ public class GunBase : MonoBehaviour
             
             bullet.damage = gunData.damage; 
         }
-      
+
+       
   
         muzzleEffect.Play();
         AudioManager.Instance.PlaySFX("GunShot");

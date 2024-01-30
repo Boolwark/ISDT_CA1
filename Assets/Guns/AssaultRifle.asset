@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
   magazineSize: 100
-  fireRate: 0.1
+  fireRate: 0.8
+  muzzleDuration: 0.5
   reloadDuration: 2
   shotsPerFire: 5
   nClips: 3
-  damage: 50
-  recoilStrength: 1
+  damage: 1000
+  recoilStrength: 0
   nVibrations: 2
   shakeDuration: 2
   bullet: {fileID: 8979021648546929699, guid: 3447c64160c6841fc9a08251bbccd512, type: 3}
-  fireSpeed: 20
+  fireSpeed: 40
   recoilRecoverySpeed: 0.8
-  maxSpreadTime: 1
+  maxSpreadTime: 0
   Spread: {x: 0.1, y: 0.1, z: 0.1}

@@ -11,7 +11,6 @@ namespace Weapons.Sword
             if (collision.collider.TryGetComponent(out Bullet bullet))
             {
                 Debug.Log("Deflecting");
-                bullet.enemyTag = "Enemy";
                 bullet.GetComponent<TrailRenderer>().material = deflectedMaterial;
                 //apply deflection physics to bullet here
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
