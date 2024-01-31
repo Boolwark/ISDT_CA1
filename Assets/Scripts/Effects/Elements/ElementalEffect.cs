@@ -15,12 +15,24 @@ namespace Effects.Elements
         public float range=3f;
         private MeshRenderer _renderer;
         public LayerMask whatIsEnemy;
+        public bool hitEnemy;
+
+        private void Start() 
+        {
+                 
+        }
 
         public virtual void Activate()
         {
             if (transform.parent == null)
             {
                 transform.parent = GetClosestTarget();
+            }
+
+            if (transform.parent == null)
+            {
+                hitEnemy = false;
+                return;
             }
             _renderer = transform.parent.GetComponent<MeshRenderer>();
             sm = transform.parent.GetComponent<StatsManager>();

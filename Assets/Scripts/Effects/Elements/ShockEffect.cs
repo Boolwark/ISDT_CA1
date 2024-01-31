@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Stats;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -10,11 +11,16 @@ namespace Effects.Elements
         public float shakeStrength;
         public int vibration;
         public float interval;
+
         public override void Activate()
         {
             base.Activate();
-            StartCoroutine(ShakeCoroutine());
-            base.sm.TakeDamage(damage);
+            if (base.hitEnemy)
+            {
+                StartCoroutine(ShakeCoroutine());
+                base.sm.TakeDamage(damage);
+            }
+
         }
         void Start()
         {

@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53310
+57725
 Successfully changed project path to: /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1
 /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -54,7 +54,7 @@ Successfully changed project path to: /Users/ethanyong/Downloads/ETHANYONGBENGHI
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 1113.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 248.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -71,84 +71,84 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56486
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56477
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.11f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2021.3.11f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.001806 seconds.
+Registered in 0.002929 seconds.
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 147.77 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 139.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.562 seconds
+- Completed reload, in  0.539 seconds
 Domain Reload Profiling:
-	ReloadAssembly (562ms)
+	ReloadAssembly (539ms)
 		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (417ms)
-			LoadAssemblies (69ms)
+		EndReloadAssembly (393ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (89ms)
+			SetupTypeCache (84ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (274ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (251ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (35ms)
+				InitializePlatformSupportModulesInManaged (31ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (148ms)
+				RefreshPlugins (139ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (59ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
+				ProcessInitializeOnLoadAttributes (54ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010309 seconds.
+Registered in 0.009919 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 171.68 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 170.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.724 seconds
+- Completed reload, in  1.648 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1725ms)
-		BeginReloadAssembly (206ms)
+	ReloadAssembly (1649ms)
+		BeginReloadAssembly (195ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (134ms)
-		EndReloadAssembly (1435ms)
-			LoadAssemblies (122ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (327ms)
-			ReleaseScriptCaches (8ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (868ms)
+			CreateAndSetChildDomain (135ms)
+		EndReloadAssembly (1373ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (266ms)
+			ReleaseScriptCaches (6ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (882ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (172ms)
-				BeforeProcessingInitializeOnLoad (116ms)
-				ProcessInitializeOnLoadAttributes (509ms)
-				ProcessInitializeOnLoadMethodAttributes (61ms)
+				RefreshPlugins (171ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (532ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
 				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
@@ -157,13 +157,13 @@ Worker process is ready to serve import requests
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Launching external process: /Applications/Unity/Hub/Editor/2021.3.11f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.53 seconds
-Refreshing native plugins compatible for Editor in 8.87 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.24 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7665 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (1.3 MB). Loaded Objects now: 8134.
-Memory consumption went from 499.8 MB to 498.5 MB.
-Total: 17.427541 ms (FindLiveObjects: 1.156875 ms CreateObjectMapping: 0.175417 ms MarkObjects: 15.273208 ms  DeleteObjects: 0.821083 ms)
+Unloading 7674 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (1.3 MB). Loaded Objects now: 8143.
+Memory consumption went from 509.3 MB to 508.1 MB.
+Total: 14.072042 ms (FindLiveObjects: 0.532625 ms CreateObjectMapping: 3.786583 ms MarkObjects: 6.299334 ms  DeleteObjects: 3.452208 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -177,239 +177,137 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1756987.790193 seconds.
-  path: Assets/Scripts/Player/XR/KeepPlayerAboveGround.cs
-  artifactKey: Guid(8c4240b2da2a24220995e4d049c934ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Scripts/Player/XR/KeepPlayerAboveGround.cs using Guid(8c4240b2da2a24220995e4d049c934ed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0db79b530aaaddb12fc01ff282e000d8') in 0.311338 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007707 seconds.
-Begin MonoManager ReloadAssembly
-Thread 0x2b7687000 may have been prematurely finalized
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.64 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.417 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1419ms)
-		BeginReloadAssembly (290ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (166ms)
-		EndReloadAssembly (1052ms)
-			LoadAssemblies (111ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (341ms)
-			ReleaseScriptCaches (25ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (462ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (316ms)
-				ProcessInitializeOnLoadMethodAttributes (54ms)
-				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 3.98 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7418 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8139.
-Memory consumption went from 503.9 MB to 502.7 MB.
-Total: 37.010458 ms (FindLiveObjects: 2.360167 ms CreateObjectMapping: 1.062250 ms MarkObjects: 24.990875 ms  DeleteObjects: 8.594958 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 1877224.901023 seconds.
+  path: Assets/ReverseGiver.prefab
+  artifactKey: Guid(67f15cea185684683a49a2868b1758ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ReverseGiver.prefab using Guid(67f15cea185684683a49a2868b1758ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293024f1ccffb7db13c2cfee77f66135') in 0.439584 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 233.751245 seconds.
-  path: Assets/Free LowPoly SciFi Pack/Scenes/UnderwaterScene.unity
-  artifactKey: Guid(a6096f87c0bb6ae47affc4d9c4af4beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Free LowPoly SciFi Pack/Scenes/UnderwaterScene.unity using Guid(a6096f87c0bb6ae47affc4d9c4af4beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '463b260732023843056111d7388d1183') in 0.186944 seconds 
+  Time since last request: 5.566126 seconds.
+  path: Assets/Sword.prefab
+  artifactKey: Guid(0dd059eeeafb042509e4f4aa199c18c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sword.prefab using Guid(0dd059eeeafb042509e4f4aa199c18c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a38c6bde85488ca50cdaf79a7753d4e') in 0.094955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/WebProjectile.prefab
+  artifactKey: Guid(f761628c2c8114f56a8492daad62ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/WebProjectile.prefab using Guid(f761628c2c8114f56a8492daad62ca5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947b8e7644bfed0fd732f0b800284c93') in 0.065405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.560053 seconds.
+  path: Assets/ShotGun.prefab
+  artifactKey: Guid(df3b38a0c2b9248ac9e159527deac72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShotGun.prefab using Guid(df3b38a0c2b9248ac9e159527deac72a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b3647b072090f686db3a43ce07e842f') in 0.091568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Player.prefab
+  artifactKey: Guid(95c32a7d17256432b9504602a89aca9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player.prefab using Guid(95c32a7d17256432b9504602a89aca9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73684e01b716e5c85685363934abf500') in 0.089586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.224927 seconds.
+  path: Assets/[MANAGERS].prefab
+  artifactKey: Guid(b3e3a20216e274f1281eb8d536347f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/[MANAGERS].prefab using Guid(b3e3a20216e274f1281eb8d536347f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e68d0c14308e39fd53fdd0a06e4c608') in 0.095546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Bullet.prefab
+  artifactKey: Guid(3447c64160c6841fc9a08251bbccd512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bullet.prefab using Guid(3447c64160c6841fc9a08251bbccd512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a62a3fc6799e92bcd447133fe6eea06') in 0.017590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/battery.prefab
+  artifactKey: Guid(b2996f64c56364b88af4b88a49f19026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/battery.prefab using Guid(b2996f64c56364b88af4b88a49f19026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6070dedf0893206f191777989f4138') in 0.042841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.771403 seconds.
+  path: Assets/ComputerDesk 1.prefab
+  artifactKey: Guid(e658320d52f634923958a1bae0e58adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ComputerDesk 1.prefab using Guid(e658320d52f634923958a1bae0e58adb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0dc2766d873ee143f6e9de2765411a9') in 0.168296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/DualSword.prefab
+  artifactKey: Guid(f683ce425b35843f79a1fd3f1606436e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DualSword.prefab using Guid(f683ce425b35843f79a1fd3f1606436e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4f2893aefb0fcbd2159ad30a260075b') in 0.034861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.795212 seconds.
+  path: Assets/ElectroGiver.prefab
+  artifactKey: Guid(958891940378d4816b39fb3db251b6d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ElectroGiver.prefab using Guid(958891940378d4816b39fb3db251b6d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd19f6e71d7732b8bee9133161819b3e4') in 0.102946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.087607 seconds.
+  path: Assets/EnemyBullet.prefab
+  artifactKey: Guid(b4add63effbd441e9b72d45aec1265e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/EnemyBullet.prefab using Guid(b4add63effbd441e9b72d45aec1265e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9669b7d52dc90faf654fdc7b0deeaddd') in 0.016192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.759226 seconds.
+  path: Assets/FreezeGiver.prefab
+  artifactKey: Guid(3f6f5facb928742129affb0e26281e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreezeGiver.prefab using Guid(3f6f5facb928742129affb0e26281e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af0c38667073eaed5c5db4b5f4f97b4') in 0.117414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.640208 seconds.
+  path: Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/ChainCharge.prefab
+  artifactKey: Guid(8f3052adaa74dfd4cb36c5818c58df60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/ChainCharge.prefab using Guid(8f3052adaa74dfd4cb36c5818c58df60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff694f2d6dcd51b89c9c3470c0a0d7bd') in 0.037582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 84.008495 seconds.
+  path: Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/ChainCharge.prefab
+  artifactKey: Guid(8f3052adaa74dfd4cb36c5818c58df60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/ChainCharge.prefab using Guid(8f3052adaa74dfd4cb36c5818c58df60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7e821e165ac41afc9305dade72d23b2') in 0.030491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 173.163511 seconds.
+  path: Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Void.prefab
+  artifactKey: Guid(a716a4964e991f04288cf251ff85bd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Void.prefab using Guid(a716a4964e991f04288cf251ff85bd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f2d1b084ceb41b7cba891962daab4f') in 0.029928 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003534 seconds.
+Registered in 0.002659 seconds.
 Begin MonoManager ReloadAssembly
-Thread 0x2a2887000 may have been prematurely finalized
+Thread 0x2bf0fb000 may have been prematurely finalized
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 6.62 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.370 seconds
+- Completed reload, in  1.593 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1371ms)
-		BeginReloadAssembly (221ms)
+	ReloadAssembly (1601ms)
+		BeginReloadAssembly (336ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (22ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (109ms)
-		EndReloadAssembly (1079ms)
-			LoadAssemblies (118ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (257ms)
-			ReleaseScriptCaches (11ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (610ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (7ms)
-				BeforeProcessingInitializeOnLoad (113ms)
-				ProcessInitializeOnLoadAttributes (409ms)
-				ProcessInitializeOnLoadMethodAttributes (66ms)
-				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 7.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7418 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8144.
-Memory consumption went from 504.2 MB to 503.0 MB.
-Total: 23.324875 ms (FindLiveObjects: 0.781500 ms CreateObjectMapping: 0.171750 ms MarkObjects: 21.790542 ms  DeleteObjects: 0.579958 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002539 seconds.
-Begin MonoManager ReloadAssembly
-Thread 0x2a2887000 may have been prematurely finalized
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.263 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1264ms)
-		BeginReloadAssembly (296ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (140ms)
-		EndReloadAssembly (899ms)
-			LoadAssemblies (134ms)
-			RebuildTransferFunctionScriptingTraits (4ms)
-			SetupTypeCache (292ms)
+			CreateAndSetChildDomain (103ms)
+		EndReloadAssembly (1190ms)
+			LoadAssemblies (171ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (277ms)
 			ReleaseScriptCaches (13ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (396ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (651ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (3ms)
 				BeforeProcessingInitializeOnLoad (75ms)
-				ProcessInitializeOnLoadAttributes (248ms)
-				ProcessInitializeOnLoadMethodAttributes (60ms)
-				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 4.91 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7418 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8149.
-Memory consumption went from 504.6 MB to 503.3 MB.
-Total: 12.560625 ms (FindLiveObjects: 2.670583 ms CreateObjectMapping: 0.165333 ms MarkObjects: 9.398000 ms  DeleteObjects: 0.326042 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003137 seconds.
-Begin MonoManager ReloadAssembly
-Thread 0x2a2a93000 may have been prematurely finalized
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 6.76 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.813 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1815ms)
-		BeginReloadAssembly (253ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (118ms)
-		EndReloadAssembly (1470ms)
-			LoadAssemblies (180ms)
-			RebuildTransferFunctionScriptingTraits (2ms)
-			SetupTypeCache (457ms)
-			ReleaseScriptCaches (22ms)
-			RebuildScriptCaches (65ms)
-			SetupLoadedEditorAssemblies (722ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (7ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (523ms)
-				ProcessInitializeOnLoadMethodAttributes (82ms)
+				ProcessInitializeOnLoadAttributes (506ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -417,12 +315,12 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7418 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8154.
-Memory consumption went from 504.9 MB to 503.7 MB.
-Total: 24.750084 ms (FindLiveObjects: 0.766250 ms CreateObjectMapping: 0.667417 ms MarkObjects: 22.746208 ms  DeleteObjects: 0.568667 ms)
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (1.3 MB). Loaded Objects now: 8214.
+Memory consumption went from 0.51 GB to 0.51 GB.
+Total: 8.626166 ms (FindLiveObjects: 0.486459 ms CreateObjectMapping: 0.169833 ms MarkObjects: 7.467583 ms  DeleteObjects: 0.501666 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -431,60 +329,277 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 301.833389 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab
+  artifactKey: Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab using Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd89eb04c8277fce3fdb6b726826c8ea') in 0.272393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.385794 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab
+  artifactKey: Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab using Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1c756d04d62ba9fe671fa33ca81db2') in 0.029722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.019532 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab
+  artifactKey: Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab using Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a253756564904e32080079f6b1f7e6d3') in 0.021807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.752028 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab
+  artifactKey: Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Magic circles/Magic circle 2.prefab using Guid(48c5715f9603c3842a353516a8baefbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffec6e645504d2cd5f5ab81e684110c1') in 0.047916 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002636 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x2a3087000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.230 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1235ms)
+		BeginReloadAssembly (165ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (87ms)
+		EndReloadAssembly (992ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (308ms)
+			ReleaseScriptCaches (15ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (407ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (229ms)
+				ProcessInitializeOnLoadMethodAttributes (85ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (35ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 5.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.3 MB). Loaded Objects now: 8260.
+Memory consumption went from 0.51 GB to 0.51 GB.
+Total: 27.304125 ms (FindLiveObjects: 4.342458 ms CreateObjectMapping: 0.258375 ms MarkObjects: 22.213000 ms  DeleteObjects: 0.489500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 151.499401 seconds.
+  path: Assets/FreezeGiver.prefab
+  artifactKey: Guid(3f6f5facb928742129affb0e26281e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FreezeGiver.prefab using Guid(3f6f5facb928742129affb0e26281e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fafcb46bab670597d9adea1c1d5e7d53') in 0.458657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.294958 seconds.
+  path: Assets/ReverseGiver.prefab
+  artifactKey: Guid(67f15cea185684683a49a2868b1758ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ReverseGiver.prefab using Guid(67f15cea185684683a49a2868b1758ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84b1d629dbfe612e4087604d50eadc6') in 0.097971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 290.786315 seconds.
+  path: Assets/LowPoly Guns/Meshes/RPJ.fbx
+  artifactKey: Guid(bbbabda1de348db41bda1f2ef746ca46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPoly Guns/Meshes/RPJ.fbx using Guid(bbbabda1de348db41bda1f2ef746ca46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc85c8a1d33613e94821d0e5a375afc') in 0.836535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.134368 seconds.
+  path: Assets/RocketLauncher.prefab
+  artifactKey: Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RocketLauncher.prefab using Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a43815a7bb225ba8c90331d23d798291') in 0.212111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 185.634021 seconds.
+  path: Assets/LowPoly Guns/Meshes/Pistol 1.fbx
+  artifactKey: Guid(e6efe674338ad4a49866fd7e5c2ba6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPoly Guns/Meshes/Pistol 1.fbx using Guid(e6efe674338ad4a49866fd7e5c2ba6b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aa601456e64d407e28b23088c5cdec5') in 0.054884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000114 seconds.
+  path: Assets/LowPoly Guns/Meshes/ShotGun.fbx
+  artifactKey: Guid(f33a6750edda74241bd72bbd1b8fec7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPoly Guns/Meshes/ShotGun.fbx using Guid(f33a6750edda74241bd72bbd1b8fec7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f05b4d22b59774a40f83b885661f7af8') in 0.025301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/LowPoly Guns/Meshes/Sniper.fbx
+  artifactKey: Guid(db5ef47b9b5631844bab1e1c50f5a988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPoly Guns/Meshes/Sniper.fbx using Guid(db5ef47b9b5631844bab1e1c50f5a988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea302bdc61b359efbc4c2874d9427418') in 0.037072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/LowPoly Guns/Meshes/Rifle 3.fbx
+  artifactKey: Guid(a5f56547380d3e6448e877c01e64c479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LowPoly Guns/Meshes/Rifle 3.fbx using Guid(a5f56547380d3e6448e877c01e64c479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5403ec4fd040849df9e18b6c494fd3c2') in 0.020986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 44.830206 seconds.
+  path: Assets/Sci-Fi Styled Modular Pack/Prefabs/Doors
+  artifactKey: Guid(692fa680fe17e634b8013fab03acfba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sci-Fi Styled Modular Pack/Prefabs/Doors using Guid(692fa680fe17e634b8013fab03acfba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93c495efb5efe920e67ad60143294c15') in 0.002213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 260.353578 seconds.
+  path: Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Blood Ribbon.prefab
+  artifactKey: Guid(721828800f41bb840b0b3916d19228f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Blood Ribbon.prefab using Guid(721828800f41bb840b0b3916d19228f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d6b647ed458899bd0937462649fbbce') in 0.062577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Darkness.prefab
+  artifactKey: Guid(d7bef4a7a970f0b4ca3fcda740f48f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Particle Ribbon by Moonflower Carnivore/Prefabs/Darkness.prefab using Guid(d7bef4a7a970f0b4ca3fcda740f48f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63d373d43ff528e8de9f9ca18b0a601') in 0.035684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.309288 seconds.
+  path: Assets/Fire Axe/Prefab/Mobile/Fire_Axe_LODA.prefab
+  artifactKey: Guid(f5ff63cb0edf13047a2a2d6c3e856dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fire Axe/Prefab/Mobile/Fire_Axe_LODA.prefab using Guid(f5ff63cb0edf13047a2a2d6c3e856dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3a19c263d5a3f7b203708097258b4f') in 0.059060 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006730 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x2a389f000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.790 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1795ms)
+		BeginReloadAssembly (240ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (22ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (113ms)
+		EndReloadAssembly (1486ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (515ms)
+			ReleaseScriptCaches (21ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (685ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (507ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 4.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.2 MB). Loaded Objects now: 8309.
+Memory consumption went from 0.52 GB to 0.52 GB.
+Total: 22.115084 ms (FindLiveObjects: 0.692459 ms CreateObjectMapping: 0.161208 ms MarkObjects: 20.227208 ms  DeleteObjects: 1.031667 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006686 seconds.
+Registered in 0.002805 seconds.
 Begin MonoManager ReloadAssembly
-Thread 0x2a2a93000 may have been prematurely finalized
+Thread 0x16f877000 may have been prematurely finalized
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.98 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.489 seconds
+- Completed reload, in  1.315 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1490ms)
-		BeginReloadAssembly (223ms)
+	ReloadAssembly (1316ms)
+		BeginReloadAssembly (262ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (99ms)
-		EndReloadAssembly (1199ms)
-			LoadAssemblies (112ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (373ms)
-			ReleaseScriptCaches (33ms)
-			RebuildScriptCaches (85ms)
-			SetupLoadedEditorAssemblies (562ms)
+			CreateAndSetChildDomain (112ms)
+		EndReloadAssembly (980ms)
+			LoadAssemblies (145ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (303ms)
+			ReleaseScriptCaches (15ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (431ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (75ms)
-				ProcessInitializeOnLoadAttributes (407ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (290ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
 				AfterProcessingInitializeOnLoad (1ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 4.21 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.16 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7418 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8159.
-Memory consumption went from 0.50 GB to 0.50 GB.
-Total: 22.037583 ms (FindLiveObjects: 0.759458 ms CreateObjectMapping: 0.238041 ms MarkObjects: 20.364209 ms  DeleteObjects: 0.674875 ms)
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8314.
+Memory consumption went from 0.52 GB to 0.52 GB.
+Total: 6.365750 ms (FindLiveObjects: 0.389500 ms CreateObjectMapping: 0.140875 ms MarkObjects: 5.535166 ms  DeleteObjects: 0.299417 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -493,14 +608,904 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003411 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.374 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1375ms)
+		BeginReloadAssembly (187ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (87ms)
+		EndReloadAssembly (1112ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (11ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (582ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (399ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 13.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8319.
+Memory consumption went from 0.52 GB to 0.52 GB.
+Total: 39.569583 ms (FindLiveObjects: 5.910833 ms CreateObjectMapping: 0.690417 ms MarkObjects: 31.264125 ms  DeleteObjects: 1.700542 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 259.269137 seconds.
-  path: Assets/Free LowPoly SciFi Pack/Scenes/UnderwaterScene.unity
-  artifactKey: Guid(a6096f87c0bb6ae47affc4d9c4af4beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Free LowPoly SciFi Pack/Scenes/UnderwaterScene.unity using Guid(a6096f87c0bb6ae47affc4d9c4af4beb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8b849d46443cc06f48e3db0a38debe9a') in 0.131760 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 480.945033 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76b1b166953d719d9fbe0eeb81b0281a') in 0.394999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.048114 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'babdfff59038d43325cb6d14691e1509') in 0.063534 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003287 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.428 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1430ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (94ms)
+		EndReloadAssembly (1157ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (306ms)
+			ReleaseScriptCaches (11ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (604ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (433ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 7.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8365.
+Memory consumption went from 0.52 GB to 0.52 GB.
+Total: 19.758958 ms (FindLiveObjects: 0.504917 ms CreateObjectMapping: 0.229792 ms MarkObjects: 18.618833 ms  DeleteObjects: 0.404250 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 67.224521 seconds.
+  path: Assets/RocketLauncher.prefab
+  artifactKey: Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RocketLauncher.prefab using Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '769c679f9c51d183f4e92ae0cbf1575f') in 0.414583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.818604 seconds.
+  path: Assets/Guns/RocketLauncher.asset
+  artifactKey: Guid(aab3db8ea6ea44b11bb0f44d6901d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Guns/RocketLauncher.asset using Guid(aab3db8ea6ea44b11bb0f44d6901d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ad9db77f8d02583c00cb75ad835992a') in 0.126811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.154674 seconds.
+  path: Assets/RocketLauncher.prefab
+  artifactKey: Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RocketLauncher.prefab using Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35df6729bcc5d424d7c1dda2f6f2237f') in 0.088871 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002624 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 9.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.295 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1299ms)
+		BeginReloadAssembly (206ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (108ms)
+		EndReloadAssembly (1019ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (271ms)
+			ReleaseScriptCaches (8ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (464ms)
+				LogAssemblyErrors (1ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (9ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (264ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 13.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8411.
+Memory consumption went from 0.53 GB to 0.52 GB.
+Total: 24.762750 ms (FindLiveObjects: 0.995875 ms CreateObjectMapping: 0.239750 ms MarkObjects: 18.739334 ms  DeleteObjects: 4.786958 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003183 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 13.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.229 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1230ms)
+		BeginReloadAssembly (170ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (87ms)
+		EndReloadAssembly (993ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (290ms)
+			ReleaseScriptCaches (18ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (481ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (14ms)
+				BeforeProcessingInitializeOnLoad (114ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 4.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8416.
+Memory consumption went from 0.53 GB to 0.52 GB.
+Total: 4.316416 ms (FindLiveObjects: 0.352125 ms CreateObjectMapping: 0.172041 ms MarkObjects: 3.524000 ms  DeleteObjects: 0.267084 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 313.625567 seconds.
+  path: Assets/Guns/RocketLauncher.asset
+  artifactKey: Guid(aab3db8ea6ea44b11bb0f44d6901d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Guns/RocketLauncher.asset using Guid(aab3db8ea6ea44b11bb0f44d6901d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '804fde68b45c1cb9ab6363b569a8edd6') in 0.088351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.900373 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c38a332e968646d578d417c6438e486') in 0.243804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.464900 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352ae2b2e8d348a296a574e16853d130') in 0.022319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.172518 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5885e6fd5835adaa31b57e34bb0605a') in 0.063687 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003228 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 8.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.262 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1263ms)
+		BeginReloadAssembly (177ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (18ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (1008ms)
+			LoadAssemblies (58ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (5ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (518ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (9ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (337ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 9.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8462.
+Memory consumption went from 0.53 GB to 0.52 GB.
+Total: 24.655500 ms (FindLiveObjects: 4.738750 ms CreateObjectMapping: 0.803333 ms MarkObjects: 18.262333 ms  DeleteObjects: 0.849083 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 53.529466 seconds.
+  path: Assets/RocketLauncher.prefab
+  artifactKey: Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RocketLauncher.prefab using Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04bbf408cc9992871ac5d651e0e8adc') in 0.707389 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002911 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f877000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 9.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.677 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1679ms)
+		BeginReloadAssembly (585ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (35ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (2ms)
+			CreateAndSetChildDomain (278ms)
+		EndReloadAssembly (997ms)
+			LoadAssemblies (230ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (303ms)
+			ReleaseScriptCaches (17ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (424ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (10ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (273ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 5.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8508.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 4.469292 ms (FindLiveObjects: 0.499583 ms CreateObjectMapping: 0.387042 ms MarkObjects: 3.139208 ms  DeleteObjects: 0.442834 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 276.340952 seconds.
+  path: Assets/RocketLauncher.prefab
+  artifactKey: Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RocketLauncher.prefab using Guid(7b9879f393e9d404d8853fd4e0d8a635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9d17fc7f486943a807f7a39e407466') in 0.200625 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003227 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.423 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1424ms)
+		BeginReloadAssembly (221ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (103ms)
+		EndReloadAssembly (1116ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (21ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (572ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (6ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (372ms)
+				ProcessInitializeOnLoadMethodAttributes (98ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 5.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7434 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.2 MB). Loaded Objects now: 8554.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 15.796500 ms (FindLiveObjects: 1.069041 ms CreateObjectMapping: 0.258458 ms MarkObjects: 13.878875 ms  DeleteObjects: 0.587167 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 150.608185 seconds.
+  path: Assets/DroneBall.prefab
+  artifactKey: Guid(b2bb5975e18134457bfc1c70dcda82cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DroneBall.prefab using Guid(b2bb5975e18134457bfc1c70dcda82cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352eb1402c801f4446e6aaffd97aacac') in 0.844659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.047970 seconds.
+  path: Assets/Explosion.prefab
+  artifactKey: Guid(6329acd262e1149a6b79037211c33ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Explosion.prefab using Guid(6329acd262e1149a6b79037211c33ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a0f5c00f9f8abf7b0b063e7e3a7d26') in 0.025377 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005650 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 6.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.835 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1838ms)
+		BeginReloadAssembly (354ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (28ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (155ms)
+		EndReloadAssembly (1404ms)
+			LoadAssemblies (226ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (436ms)
+			ReleaseScriptCaches (40ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (579ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (7ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (418ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 4.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7435 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8601.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 14.606792 ms (FindLiveObjects: 0.609208 ms CreateObjectMapping: 1.005958 ms MarkObjects: 12.597042 ms  DeleteObjects: 0.393375 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 208.690655 seconds.
+  path: Assets/Explosion.prefab
+  artifactKey: Guid(6329acd262e1149a6b79037211c33ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Explosion.prefab using Guid(6329acd262e1149a6b79037211c33ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ce35453b9b3075c48ab4d1ef37e834') in 0.111599 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002599 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.342 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1343ms)
+		BeginReloadAssembly (198ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (89ms)
+		EndReloadAssembly (1068ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (2ms)
+			SetupTypeCache (297ms)
+			ReleaseScriptCaches (12ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (520ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (359ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (2ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 5.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7435 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8606.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 25.526875 ms (FindLiveObjects: 0.815625 ms CreateObjectMapping: 0.152125 ms MarkObjects: 23.833625 ms  DeleteObjects: 0.723375 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 48.427831 seconds.
+  path: Assets/Bullet.prefab
+  artifactKey: Guid(3447c64160c6841fc9a08251bbccd512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bullet.prefab using Guid(3447c64160c6841fc9a08251bbccd512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede239cd1acd95e168419b40eed7f411') in 0.399658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.575656 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9914e2bcde817542bd655bb1250279f7') in 0.127377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 73.599215 seconds.
+  path: Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Electro slash.prefab
+  artifactKey: Guid(4aa9f30a28a77224ba84b2a2c334c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Magic effects pack/Prefabs/Slash effects/Electro slash.prefab using Guid(4aa9f30a28a77224ba84b2a2c334c71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8468b8cf4dfc9effa373c32d589be3') in 0.072056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.602887 seconds.
+  path: Assets/LootCrate.prefab
+  artifactKey: Guid(b526218ab8c38441eb2a0488ac40988e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LootCrate.prefab using Guid(b526218ab8c38441eb2a0488ac40988e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0558cb8b69da1c21efae026a3b86ac4') in 0.141312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.765807 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab
+  artifactKey: Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab using Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c36d09d026a7d85f62b6994ac0915baf') in 0.072131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.148615 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab
+  artifactKey: Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab using Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa7c3bf6f7000b08961d2f84089aa25') in 0.031763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.909793 seconds.
+  path: Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab
+  artifactKey: Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JMO Assets/WarFX/_Effects/Explosions/WFX_Explosion.prefab using Guid(b46890100828db6429ff69c322b45893) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '598e17b41fc8921f0cf5afac4743e083') in 0.017969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 136.500178 seconds.
+  path: Assets/Fireball.prefab
+  artifactKey: Guid(0b59a2956386e497f820bbf0cee73403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fireball.prefab using Guid(0b59a2956386e497f820bbf0cee73403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3c427c2512c14ad550b105833b5b71') in 0.417828 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002581 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 9.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.857 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1860ms)
+		BeginReloadAssembly (336ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (151ms)
+		EndReloadAssembly (1447ms)
+			LoadAssemblies (138ms)
+			RebuildTransferFunctionScriptingTraits (1ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (14ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (853ms)
+				LogAssemblyErrors (1ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (10ms)
+				BeforeProcessingInitializeOnLoad (155ms)
+				ProcessInitializeOnLoadAttributes (602ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 6.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7435 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8652.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 23.905875 ms (FindLiveObjects: 1.133875 ms CreateObjectMapping: 0.240833 ms MarkObjects: 22.025959 ms  DeleteObjects: 0.502792 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 127.509117 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0e8b17969afe0c4ab9ce941dd16850b') in 1.137085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.362137 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21bedd533b78dea341e4838a0d1a8272') in 0.044632 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002705 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.545 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1546ms)
+		BeginReloadAssembly (237ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (121ms)
+		EndReloadAssembly (1241ms)
+			LoadAssemblies (133ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (545ms)
+			ReleaseScriptCaches (28ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (415ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (258ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 4.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7435 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8698.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 30.991291 ms (FindLiveObjects: 0.785250 ms CreateObjectMapping: 0.262709 ms MarkObjects: 29.258083 ms  DeleteObjects: 0.683416 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002563 seconds.
+Begin MonoManager ReloadAssembly
+Thread 0x16f1e7000 may have been prematurely finalized
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ethanyong/Downloads/ETHANYONGBENGHIN-KANDANS:OBALAMURUKAN/GameSource/ISDT_CA1/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 5.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.JsonUtility.FromJson[T] (System.String json) [0x00001] in /Users/bokken/buildslave/unity/build/Modules/JSONSerialize/Public/JsonUtility.bindings.cs:30 
+  at UnityEditor.StateCache`1[T].GetState (UnityEngine.Hash128 key, T defaultValue) [0x00067] in /Users/bokken/buildslave/unity/build/Editor/Mono/Utils/StateCache.cs:88 
+  at UnityEditor.Tools.OnEnable () [0x0003a] in /Users/bokken/buildslave/unity/build/Editor/Mono/GUI/Tools/Tools.cs:389 
+UnityEngine.ScriptableObject:CreateScriptableObjectInstanceFromType(Type, Boolean)
+UnityEngine.ScriptableObject:CreateInstance(Type) (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/ScriptableObject.bindings.cs:35)
+UnityEngine.ScriptableObject:CreateInstance() (at /Users/bokken/buildslave/unity/build/Runtime/Export/Scripting/ScriptableObject.bindings.cs:41)
+UnityEditor.Tools:get_get() (at /Users/bokken/buildslave/unity/build/Editor/Mono/GUI/Tools/Tools.cs:50)
+UnityEditor.Tools:get_visibleLayers() (at /Users/bokken/buildslave/unity/build/Editor/Mono/GUI/Tools/Tools.cs:357)
+UnityEditor.Animations.Rigging.BoneRendererUtils:.cctor() (at Library/PackageCache/com.unity.animation.rigging@1.1.1/Editor/Utils/BoneRendererUtils.cs:121)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(IntPtr)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor(RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes(Type[]) (at /Users/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:126)
+
+(Filename: /Users/bokken/buildslave/unity/build/Editor/Mono/GUI/Tools/Tools.cs Line: 389)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1666ms)
+		BeginReloadAssembly (221ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (100ms)
+		EndReloadAssembly (1372ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (387ms)
+			ReleaseScriptCaches (24ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (642ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (6ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (447ms)
+				ProcessInitializeOnLoadMethodAttributes (90ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (35ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 5.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7435 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (1.3 MB). Loaded Objects now: 8703.
+Memory consumption went from 0.53 GB to 0.53 GB.
+Total: 60.918917 ms (FindLiveObjects: 3.435625 ms CreateObjectMapping: 3.506459 ms MarkObjects: 50.564833 ms  DeleteObjects: 3.411292 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 179.538953 seconds.
+  path: Assets/Rocket2.prefab
+  artifactKey: Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rocket2.prefab using Guid(929df0529a7204acb8243d21c36f0c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4825b293b080beaa6c99c47cf956a3') in 0.366307 seconds 

@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Weapons.Magazines;
+using Weapons.Magazines.Weapons.Magazines;
 
 namespace Weapons
 {
@@ -13,6 +15,8 @@ namespace Weapons
         private bool isReloading = false;
         private bool triggerHeld = false;
         private Coroutine autoFireCoroutine;
+        public Transform magazineHoldPos;
+        private MagazineHolder currentMagazineHolder;
 
         protected override void Start()
         {
@@ -83,6 +87,24 @@ namespace Weapons
                     autoFireCoroutine = null;
                 }
             }
+        }
+
+        public void InsertMagazine(MagazineHolder magazineHolder)
+        {
+            if (currentMagazineHolder != null)
+            {
+                currentMagazineHolder.transform.SetParent(null);
+            }
+
+            if (magazineHolder.isUsed) return;
+            magazineHolder.isUsed = true;
+            currentMagazineHolder = magazineHolder;
+            base.SetBulletPf(magazineHolder.Magazine.bulletPrefab);
+            totalAmmo += magazineHolder.Magazine.ammoCount;
+            magazineHolder.transform.SetParent(magazineHoldPos);
+            magazineHolder.transform.localPosition = Vector3.zero;
+            magazineHolder.transform.localRotation = Quaternion.identity;
+            magazineHolder.OnAttached();
         }
     }
 

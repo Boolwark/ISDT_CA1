@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2781254533894858036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802395074527745964}
+  m_Layer: 14
+  m_Name: MagazineHoldpos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &802395074527745964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781254533894858036}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.538, y: -0.41, z: -1.2206504}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8552123272812275475}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &3217777290468527197
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3217777290468527196}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +76,7 @@ GameObject:
   - component: {fileID: 3217777291244076373}
   - component: {fileID: 3217777291244076374}
   - component: {fileID: 3217777291244076375}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GunUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3217777291484014924}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +346,7 @@ GameObject:
   - component: {fileID: 3217777290536924426}
   - component: {fileID: 3217777290536924418}
   - component: {fileID: 3217777290536924423}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: ShotGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,6 +368,7 @@ Transform:
   - {fileID: 3217777291484014924}
   - {fileID: 3217777290468527196}
   - {fileID: 3217777291244076395}
+  - {fileID: 802395074527745964}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -449,6 +481,7 @@ MonoBehaviour:
   ammoDisplayCanvas: {fileID: 3217777291244076394}
   ammoDisplayText: {fileID: 3217777291244076375}
   muzzleEffect: {fileID: 7684003432872098237}
+  magazineHoldPos: {fileID: 802395074527745964}
 --- !u!114 &3217777290536924423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,10 +688,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597440, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597442, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597444, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 5045376339418597446, guid: 981993c36dcbe43b18597997c1a84e3f,
         type: 3}
       propertyPath: m_Name
       value: MuzzleEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597446, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045376339418597448, guid: 981993c36dcbe43b18597997c1a84e3f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981993c36dcbe43b18597997c1a84e3f, type: 3}

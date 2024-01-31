@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.XR.Interaction.Toolkit;
+using Util;
 
 namespace Ability.Abilities
 {
@@ -16,6 +17,7 @@ namespace Ability.Abilities
     {
         private Vector3 aoeInitScale;
         public float damage = 100f;
+        public float manaCost;
         public Color effectColor;
         public Ease aoeEffectEase;
         public float radius;
@@ -27,6 +29,11 @@ namespace Ability.Abilities
         public GameObject elementalEffectPf;
         public override void Activate(GameObject parent)
         {
+            if (!ManaManager.Instance.HasEnoughMana(manaCost))
+            {
+                return;
+            }
+            ManaManager.Instance.ChangeMana(-manaCost);
             if (isActive) return;
             if (EffectUI == null)
             {

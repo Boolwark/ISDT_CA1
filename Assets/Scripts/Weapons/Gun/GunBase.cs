@@ -1,3 +1,4 @@
+using System;
 using CodeMonkey.Utils;
 using Effects;
 using TMPro;
@@ -5,6 +6,8 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.XR.Interaction.Toolkit;
 using Weapons;
+using Weapons.Magazines.Weapons.Magazines;
+using Random = UnityEngine.Random;
 
 public class GunBase : MonoBehaviour
 {
@@ -21,10 +24,10 @@ public class GunBase : MonoBehaviour
     public ParticleSystem muzzleEffect;
     private float timeOfLastShot = 0f;
     private float rapidShootTime = 0f;
-
+    private GameObject currentBulletPf;
 
   
-    
+
 
     private Vector3 GetSpread(float shootTime = 0)
     {
@@ -37,6 +40,11 @@ public class GunBase : MonoBehaviour
 
         return spread;
     }
+
+    public void SetBulletPf(GameObject bulletPf)
+    {
+        currentBulletPf = bulletPf;
+    }
     protected virtual void Start()
     {
         grabbable = GetComponent<XRGrabInteractable>();
@@ -45,6 +53,7 @@ public class GunBase : MonoBehaviour
         grabbable.selectExited.AddListener(HideAmmoDisplay);
         ammoDisplayCanvas.gameObject.SetActive(false);
         recoilEffect = FindObjectOfType<RecoilEffect>();
+        currentBulletPf = gunData.bullet;
     }
 
     public virtual void FireBullet(ActivateEventArgs args)
@@ -63,7 +72,7 @@ public class GunBase : MonoBehaviour
         {
             recoilEffect.Activate(gunData.recoilStrength,gunData.nVibrations,gunData.shakeDuration);
         }
-        GameObject spawnedBullet = Instantiate(gunData.bullet, spawnPoint.position, Quaternion.identity);
+        GameObject spawnedBullet = Instantiate(currentBulletPf, spawnPoint.position, Quaternion.identity);
         if (spawnedBullet.TryGetComponent(out Rigidbody rb))
         {
             rb.velocity = (spawnPoint.forward * gunData.fireSpeed) + GetSpread(rapidShootTime);
@@ -74,10 +83,6 @@ public class GunBase : MonoBehaviour
             
             bullet.damage = gunData.damage; 
         }
-
-       
-  
-        muzzleEffect.Play();
         AudioManager.Instance.PlaySFX("GunShot");
         Destroy(spawnedBullet, 5);
         timeOfLastShot = Time.time;
@@ -92,9 +97,10 @@ public class GunBase : MonoBehaviour
     {
         ammoDisplayCanvas.gameObject.SetActive(false);
     }
+    
 
     protected virtual void UpdateAmmoDisplay()
     {
-        // Override this method in derived classes to update ammo display text.
+    
     }
 }

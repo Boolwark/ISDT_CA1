@@ -13,7 +13,7 @@ namespace Weapons
             if (!collision.collider.CompareTag(enemyTag) &&  !collision.collider.CompareTag("Wall")) return;
             Debug.Log("hit target");
 
-            int bulletHolesIndex = Random.Range(0, bulletHoles.Length-1);
+            int bulletHolesIndex = Random.Range(0, bulletHoles.Length);
 		
             foreach (ContactPoint contact in collision.contacts)
             {
@@ -21,6 +21,7 @@ namespace Weapons
                 Destroy(bulletHole,3f);
             }
             AudioManager.Instance.PlaySFX(soundEffect);
+          
         }
     }
 }
