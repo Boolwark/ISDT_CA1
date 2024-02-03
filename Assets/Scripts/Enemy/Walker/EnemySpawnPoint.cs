@@ -9,6 +9,7 @@ namespace Enemy.Walker
 {
     public class EnemySpawnPoint : MonoBehaviour
     {
+        public bool isFirstEnemySpawner = false;
         public float offsetX,offsetY;
         public WaveData waveData;
         public GameObject walkerPf;
@@ -17,10 +18,13 @@ namespace Enemy.Walker
 
         private void Start()
         {
-            SpawnEnemies();
+            if (isFirstEnemySpawner)
+            {
+                SpawnEnemies();
+            }
         }
 
-        private void SpawnEnemies()
+        public void SpawnEnemies()
         {
             int nEnemiesToSpawn = Random.Range(waveData.minPerCluster, waveData.maxPerCluster);
             nCurrentEnemiesInWave = nEnemiesToSpawn;

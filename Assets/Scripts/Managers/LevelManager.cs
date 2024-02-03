@@ -16,18 +16,18 @@ namespace Util
         public Slider slider;
         public TextMeshProUGUI progressText;
         public UnityEvent onSceneChanged;
-        public int currentSceneIndex = -1; // Menu scene starts first, is scene index -1.
+        public string currentScene; // Menu scene starts first, is scene index -1.
         public void ChangeScene(string sceneName)
         {
-            currentSceneIndex++;
+
             StartCoroutine(LoadLevelAsync(sceneName));
             onSceneChanged?.Invoke();
         }
         public void ChangeSceneDirect(string sceneName)
         {
-            currentSceneIndex++;
-            onSceneChanged?.Invoke();
+            currentScene = sceneName;
             SceneManager.LoadScene(sceneName);
+            onSceneChanged?.Invoke();
             AudioManager.Instance.PlayMusic(sceneName);
         }
 
@@ -52,6 +52,7 @@ namespace Util
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            ChangeSceneDirect("MenuScene");
             
         }
     }

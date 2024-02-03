@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Effects
 {
-    public class Flamethrower : EnemyWeapon
+    public class Flamethrower : NPCWeapon
     {
         public  Fire fire;
         public float activeTime = 5f;
@@ -19,7 +19,6 @@ namespace Effects
         private void Update()
         {
             timeToNextActivation -= Time.deltaTime;
-            
         }
 
         public override void Activate()
@@ -33,6 +32,11 @@ namespace Effects
         public override bool IsReady()
         {
             return timeToNextActivation <= 0f;
+        }
+
+        public override void SetTarget(Transform newTarget)
+        {
+            
         }
 
         private IEnumerator FlameEffect()

@@ -1,16 +1,14 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 namespace NPC
 {
     public class MechAlly : MonoBehaviour
     {
-        public Transform player;
-        public float followSpeed = 5f;
-        public float rotationSpeed = 10f;
-        public float detectionRadius = 10f;
-        public float meleeRange = 2f;
+        private Transform player;
+        public MechAllyConfig MechAllyConfig;
         public ElectroSpear Spear;
         private bool inMeleeRange;
         private bool usingShield;
@@ -33,17 +31,24 @@ namespace NPC
 
         private void FollowPlayer()
         {
-            Vector3 offset = new Vector3(0f, 0f, -5f);
-            Vector3 targetPosition = player.position + offset;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
+          
+            Vector3 targetPosition = player.position + MechAllyConfig.followOffset;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * MechAllyConfig.followSpeed);
 
             Quaternion targetRotation = Quaternion.LookRotation(player.position - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * MechAllyConfig.rotationSpeed);
+        }
+        private void FaceTarget(Transform target)
+        {
+            if (target == null) return;
+            Vector3 direction = (target.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
 
         private void CheckForEnemies()
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, detectionRadius, whatIsEnemy);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, MechAllyConfig.detectionRadius, whatIsEnemy);
             float closestDistance = float.MaxValue;
 
             inMeleeRange = false;
@@ -54,7 +59,7 @@ namespace NPC
                 {
                     float distanceToEnemy = Vector3.Distance(transform.position, collider.transform.position);
 
-                    if (distanceToEnemy <= meleeRange)
+                    if (distanceToEnemy <= MechAllyConfig.meleeRange)
                     {
                         inMeleeRange = true;
                         break;
@@ -72,6 +77,7 @@ namespace NPC
 
         private void AttackLogic()
         {
+            FaceTarget(currentTarget);
             if (inMeleeRange && currentTarget != null)
             {
                 MeleeAttack();

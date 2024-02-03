@@ -20,7 +20,7 @@ namespace UI
         public void OnClick()
         {
             print($"Navigating to scene {sceneName}");
-            LevelManager.Instance.ChangeScene(sceneName);
+            LevelManager.Instance.ChangeSceneDirect(sceneName);
             Destroy(this);
             button.interactable = false;
             StartCoroutine(EnableButtonAfterDelay(button, 1f));

@@ -5,9 +5,6 @@ namespace Dragon
         [CreateAssetMenu(menuName = "Dragon",fileName ="Dragon Config")]
     public class DragonConfig : ScriptableObject
     {
-        [Header("Basic Stats")]
-        public float health = 100f;
-        public float damage = 10f;
 
         [Header("Movement")]
         public float movementSpeed = 5f;

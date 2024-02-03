@@ -8,19 +8,12 @@ namespace Util
 {
     public class PortalManager: Singleton<PortalManager>
     {
-        private GameObject[] portals;
+        private GameObject[] portals = {};
         private int currentIndex = 0;
 
         private void Start()
         {
-            portals = GameObject.FindGameObjectsWithTag("Portal");
-            var player = FindObjectOfType<Player.Player>();
-            portals = portals.OrderBy(portal => Vector3.Distance(portal.transform.position, player.transform.position)).ToArray();
-            foreach (var portal in portals)
-            {portal.GetComponent<TeleportationAnchor>().teleporting.AddListener(OnPortalActivated);
-                portal.SetActive(false);
-            }
-        
+            OnSceneChanged();
         }
 
         public void OnPortalActivated(TeleportingEventArgs args)
@@ -34,8 +27,20 @@ namespace Util
 
             currentIndex += 1;
         }
-        public void ActivateCurrentPortal() 
+
+        public void OnSceneChanged()
         {
+            portals = GameObject.FindGameObjectsWithTag("Portal");
+            var player = FindObjectOfType<Player.Player>();
+            portals = portals.OrderBy(portal => Vector3.Distance(portal.transform.position, player.transform.position)).ToArray();
+            foreach (var portal in portals)
+            {portal.GetComponent<TeleportationAnchor>().teleporting.AddListener(OnPortalActivated);
+                portal.SetActive(false);
+            }
+        }
+        public void ActivateCurrentPortal()
+        {
+            if (currentIndex >= portals.Length) return;
             portals[currentIndex].SetActive(true);
         }
     }

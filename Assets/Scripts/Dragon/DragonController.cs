@@ -5,6 +5,7 @@ using DG.Tweening;
 using Dragon;
 using Stats;
 using Unity.VisualScripting;
+using Random = UnityEngine.Random;
 
 public class DragonController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class DragonController : MonoBehaviour
     int Lands;
     int TakeOff;
     int Die;
+  
     public DragonConfig dragonConfig;
     private bool seenPlayer = false;
     public enum DragonState
@@ -115,6 +117,7 @@ public class DragonController : MonoBehaviour
                 break;
             case DragonState.FlyingFWD:
                 anim.SetBool(FlyingFWD, true);
+                ChasePlayer();
                 break;
             case DragonState.Aggressive:
                 anim.SetBool(BattleStance, true);
@@ -168,6 +171,7 @@ public class DragonController : MonoBehaviour
         }
         else
         {
+            currentState = DragonState.FlyingFWD;
             ChasePlayer();
         }
     }
@@ -191,20 +195,17 @@ public class DragonController : MonoBehaviour
             // Direction to the player
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
 
-            // Calculate the rotation towards the player
             Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
 
-            // Slerp rotation using DoTween
-            transform.DORotateQuaternion(targetRotation, dragonConfig.rotationSpeed).SetSpeedBased()
-                .SetEase(Ease.Linear);
+            transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation, dragonConfig.rotationSpeed*Time.deltaTime);
+              
 
-            // Move towards the player using DoTween
-            transform.DOMove(transform.position + transform.forward * dragonConfig.movementSpeed, 1f)
-                .SetSpeedBased()
-                .SetEase(Ease.Linear)
-                .OnComplete(() => currentState = DragonState.Attack);
+         
+            transform.Translate(directionToPlayer * dragonConfig.movementSpeed*Time.deltaTime);
         }
-        
+
+        currentState = DragonState.Attack;
+
     }
 
     private void FireBreath()
@@ -225,7 +226,18 @@ public class DragonController : MonoBehaviour
         {
             sm.TakeDamage(dragonConfig.meleeDamage);
         }
+        // one in ten chance to transition to drakraris
+        if (Random.Range(0, 10) == 4)
+        {
+            FireBreath();
+        }
         AttackPlayer();
+    }
+
+    public void OnKilled()
+    {
+        Debug.Log("Playing Death Anim");
+        currentState = DragonState.Die;
     }
 
         }

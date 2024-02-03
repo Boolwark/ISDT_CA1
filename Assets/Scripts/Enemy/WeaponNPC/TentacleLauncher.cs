@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public class TentacleLauncher : EnemyWeapon
+    public class TentacleLauncher : Enemy.NPCWeapon
     {
         public GameObject tentaclePf;
         public float cooldown = 3f;
@@ -20,6 +20,11 @@ namespace Enemy
         public override bool IsReady()
         {
             return timeToNextActivation <= 0f;
+        }
+
+        public override void SetTarget(Transform newTarget)
+        {
+            
         }
 
         private void Update()

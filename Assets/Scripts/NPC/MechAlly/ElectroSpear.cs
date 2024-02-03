@@ -15,8 +15,8 @@ namespace NPC
         public GameObject slashEffect;
         public GameObject shield;
         public Transform firePos;
-        public float shieldDuration = 5f;
         private float cooldown;
+        public string[] enemyTags;
 
         private void Update()
         {
@@ -65,6 +65,24 @@ namespace NPC
             shield.transform.DOScale(shield.transform.localPosition / 1.5f, 1f);
             shield.SetActive(false);
 
+        }
+        protected virtual void OnCollisionEnter(Collision collision)
+        {
+            if (HitValidTarget(collision.gameObject) &&
+                collision.collider.TryGetComponent(out StatsManager statsManager))
+            {
+                print($"Melee damaging {collision.collider.name}");
+                statsManager.TakeDamage(GunData.damage * 1.5f);
+            }
+        }
+        private bool HitValidTarget(GameObject target)
+        {
+            foreach (string validTag in enemyTags)
+            {
+                if (target.CompareTag(validTag)) return true;
+            }
+
+            return false;
         }
     }
 }

@@ -6,9 +6,13 @@ namespace Util
 {
     public class GameManager : Singleton<GameManager>
     {
-        //Vector3(21.0999641,-3.67000008,2.07999992)
+        public bool dontDestroyPlayer = true;
         public GameObject player;
-        public List<Vector3> sceneSpawnPoints = new List<Vector3>();
+        public Dictionary<string,Vector3> sceneNamesToSpawnPoints = new Dictionary<string,Vector3>(){
+            { "MenuScene", new Vector3(12.5699997f,2.52999997f,7.23000002f) },
+            { "LoseScene",new Vector3(2.1099999f,1.98800004f,-3.52018523f) },
+            { "UnderwaterScene", new Vector3(7.31599998f,1.02999997f,-11.2950001f)}
+        };
         public enum Difficulty
         {
             EASY,
@@ -19,13 +23,22 @@ namespace Util
 
         private void Start()
         {
-            DontDestroyOnLoad(transform.parent);
+            if (dontDestroyPlayer)
+            {
+                DontDestroyOnLoad(transform.parent);
+            }
+            else
+            {
+                player.transform.parent = null;
+            }
+        
         }
 
         public void OnSceneChanged()
         {
-            print($"Current scene index is {LevelManager.Instance.currentSceneIndex}");
-            Vector3 spawnPoint = sceneSpawnPoints[LevelManager.Instance.currentSceneIndex];
+            print($"Current scene index is {LevelManager.Instance.currentScene}");
+            string currentScene = LevelManager.Instance.currentScene;
+            Vector3 spawnPoint =  sceneNamesToSpawnPoints[currentScene];
             player.transform.position = spawnPoint;
         }
     }

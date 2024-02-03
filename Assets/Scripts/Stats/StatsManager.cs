@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using CodeMonkey.Utils;
 using DefaultNamespace.ObjectPooling;
@@ -13,12 +14,19 @@ namespace Stats
     public class StatsManager : MonoBehaviour
     {
         // Attributes
+        private float initHP;
+        public bool isPlayer = false;
         [SerializeField]private float HP = 100f;
         [SerializeField]public float Attack= 10f;
         [SerializeField]private float Speed  = 5f;
         private bool isDead;
         public float killPoints;
-        
+
+        private void Start()
+        {
+            initHP = HP;
+        }
+
         public UnityEvent OnDamageTaken;
         public UnityEvent OnHealTaken;
         public UnityEvent OnKilled;
@@ -66,8 +74,16 @@ namespace Stats
 
         private IEnumerator ReturnObjectToPool()
         {
-            yield return new WaitForSeconds(2f);
-            ObjectPoolManager.ReturnObjectToPool(gameObject);
+            if (!isPlayer)
+            {
+                yield return new WaitForSeconds(2f);
+                ObjectPoolManager.ReturnObjectToPool(gameObject);
+            }
+            else
+            {
+                HP = initHP;
+                isDead = false;
+            }
         }
 
         // Method to change speed

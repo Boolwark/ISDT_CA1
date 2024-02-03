@@ -13,7 +13,7 @@ namespace Effects.Elements
         public Material effectMaterial;
         public StatsManager sm;
         public float range=3f;
-        private MeshRenderer _renderer;
+        private Renderer _renderer;
         public LayerMask whatIsEnemy;
         public bool hitEnemy;
 
@@ -35,11 +35,25 @@ namespace Effects.Elements
                 return;
             }
             _renderer = transform.parent.GetComponent<MeshRenderer>();
-            sm = transform.parent.GetComponent<StatsManager>();
+            if (_renderer == null)
+            {
+                _renderer = transform.parent.GetComponent<SkinnedMeshRenderer>();
+            }
+
+            if (_renderer == null)
+            {
+                return;
+            }
             _renderer.material = effectMaterial;
             var effect = ObjectPoolManager.SpawnObject(effectPf, transform.position, transform.rotation);
             effect.transform.parent = transform;
-            sm.OnKilled.AddListener(DeathEffect);
+            if (transform.parent.TryGetComponent(out StatsManager statsManager))
+            {
+                sm = statsManager;
+                sm.OnKilled.AddListener(DeathEffect);
+                hitEnemy = true;
+            }
+        
             //effect logic goes here.
         }
 
@@ -60,8 +74,9 @@ namespace Effects.Elements
                     closestTarget = collider.transform;
                 }
             }
-
             return closestTarget;
+
+
         }
 
         protected void DeathEffect()

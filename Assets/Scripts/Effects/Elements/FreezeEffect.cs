@@ -17,6 +17,7 @@ namespace Effects.Elements
             _meshDestroy.CutCascades = cutCascades;
             _meshDestroy.ExplodeForce = breakForce;
             base.Activate();
+            if (!base.hitEnemy) return;
             base.sm.TakeDamage(damage);
         }
         protected new void DeathEffect()

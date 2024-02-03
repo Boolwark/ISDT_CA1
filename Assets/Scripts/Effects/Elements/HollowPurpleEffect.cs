@@ -13,7 +13,10 @@ namespace Effects.Elements
         public override void Activate()
         {
             base.Activate();
-            base.sm.TakeDamage(damage);
+            if (base.hitEnemy)
+            {
+                base.sm.TakeDamage(damage);
+            }
         }
         protected new void DeathEffect()
         {
