@@ -37,6 +37,15 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
         musicSource.loop = true;
     }
+
+    public void SetSFXVolume(float newVolume)
+    {
+        sfxSource.volume = newVolume;
+    }
+    public void SetMusicVolume(float newVolume)
+    {
+        musicSource.volume = newVolume;
+    }
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);

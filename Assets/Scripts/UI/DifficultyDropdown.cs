@@ -1,15 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Util;
 
 namespace UI
 {
     public class DifficultyDropdown : MonoBehaviour
     {
-        [SerializeField] private TMP_Text difficultyText;
 
-        public void DropdownSample(int index)
+        public Dropdown Dropdown;
+        public void DropdownSample()
         {
+            int index = Dropdown.value;
             switch (index)
             {
                 case 0:
@@ -22,6 +24,7 @@ namespace UI
                     GameManager.Instance.chosenDifficulty = GameManager.Difficulty.NIGHTMARE;
                     break;
             }
+            Debug.Log("Current game difficulty: " + GameManager.Instance.chosenDifficulty);
         }
     }
 }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace Environment
@@ -5,20 +6,27 @@ namespace Environment
     public class Door : MonoBehaviour,IDestructible
     {
         private bool isOpen = false;
-        private void OnCollisionEnter(Collision collision)
+        public Ease ease;
+        public float duration = 1f;
+        public Vector3 closePosition, openPosition;
+        public void Toggle()
         {
-            if (collision.collider.CompareTag("Player") && !isOpen)
+            if (isOpen)
             {
-                if (TryGetComponent(out Rigidbody rb))
-                {
-                    rb.isKinematic = false;
-                    rb.AddExplosionForce(100f,transform.forward,1f);
-                    isOpen = true;
-                  
-                }
-              
+                transform.DOMove(closePosition, duration
+                ).SetEase(ease);
             }
+            else
+            {
+                transform.DOMove(openPosition, duration
+                ).SetEase(ease);
+            }
+
+            isOpen = !isOpen;
+
         }
+
+      
         public void OnDestroy()
         {
             Destroy(this.gameObject);
