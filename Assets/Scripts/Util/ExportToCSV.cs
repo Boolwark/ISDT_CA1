@@ -70,14 +70,6 @@ namespace Util
 
        
 
-        void Update()
-        {
-            if (!recorded && Input.GetKeyDown(KeyCode.Space))
-            {
-                recorded = true;
-                Debug.Log("Recording...");
-                Record();
-            }
-        }
+
     }
 }

@@ -76,7 +76,6 @@ namespace Weapons.Sword
                 SetupSlicedComponent(upperHull);
                 SetupSlicedComponent(lowerHull);
                 Destroy(target);
-             
             }
         }
 
@@ -86,6 +85,7 @@ namespace Weapons.Sword
             MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
             collider.convex = true;
             rb.AddExplosionForce(cutForce,slicedObject.transform.position,1);
+           // FunctionTimer.Create(() => { DissolveManager.Instance.DissolveObject(slicedObject,2f); }, 2f);
         }
     }
     

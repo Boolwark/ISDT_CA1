@@ -11,6 +11,7 @@ namespace Util
         public Dictionary<string,Vector3> sceneNamesToSpawnPoints = new Dictionary<string,Vector3>(){
             { "MenuScene", new Vector3(12.5699997f,2.52999997f,7.23000002f) },
             { "LoseScene",new Vector3(2.1099999f,1.98800004f,-3.52018523f) },
+            { "WinScene",new Vector3(2.1099999f,1.98800004f,-3.52018523f) },
             { "UnderwaterScene", new Vector3(7.31599998f,1.02999997f,-11.2950001f)}
         };
         public enum Difficulty

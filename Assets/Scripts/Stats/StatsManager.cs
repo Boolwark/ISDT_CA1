@@ -20,8 +20,8 @@ namespace Stats
         [SerializeField]public float Attack= 10f;
         [SerializeField]private float Speed  = 5f;
         private bool isDead;
-        public float killPoints;
-
+        public float killPoints; //kill points are proportional to the amount of mana the player gets.
+        public float manaMultiplier = 1 / 10f;
         private void Start()
         {
             initHP = HP;
@@ -58,6 +58,10 @@ namespace Stats
                 }
                 OnKilled?.Invoke();
                 StartCoroutine(ReturnObjectToPool());
+                if (isPlayer)
+                {
+                    ExportToCSV.Instance.Record();
+                }
 
             }
         }
@@ -124,6 +128,11 @@ namespace Stats
         public void ExplodeOnDeath()
         {
             ExplosionManager.Instance.SpawnExplosion(transform.position,transform.rotation);
+        }
+
+        public void GiveManaOnKilled()
+        {
+            ManaManager.Instance.ChangeMana(killPoints * manaMultiplier);
         }
     }
 

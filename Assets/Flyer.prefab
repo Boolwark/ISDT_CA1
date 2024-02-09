@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3659516475031597224}
   - component: {fileID: 283634262233121779}
   - component: {fileID: 1581338299183111320}
-  - component: {fileID: 6271544871452134961}
   - component: {fileID: 520778258282416010}
   - component: {fileID: 438884332234367442}
   - component: {fileID: 5374931507862295744}
@@ -96,10 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09894cab30c044a3ae1db3d93a1b8fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  isPlayer: 0
+  HP: 1000
   Attack: 10
   Speed: 5
   killPoints: 0
+  manaMultiplier: 0.1
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -131,31 +132,6 @@ NavMeshAgent:
   m_BaseOffset: 2.84
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6271544871452134961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084213767977539421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09894cab30c044a3ae1db3d93a1b8fe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  Attack: 10
-  Speed: 5
-  killPoints: 0
-  OnDamageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnHealTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  OnKilled:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!54 &520778258282416010
 Rigidbody:
   m_ObjectHideFlags: 0

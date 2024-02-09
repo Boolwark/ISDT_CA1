@@ -4931,10 +4931,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09894cab30c044a3ae1db3d93a1b8fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
+  isPlayer: 0
+  HP: 900
   Attack: 10
   Speed: 5
   killPoints: 0
+  manaMultiplier: 0.1
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls:
@@ -4968,9 +4970,9 @@ MonoBehaviour:
   OnKilled:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Enemy.Boss.PlayDeathAnimation, Assembly-CSharp
-        m_MethodName: Activate
+      - m_Target: {fileID: 7166232745702441845}
+        m_TargetAssemblyTypeName: Stats.StatsManager, Assembly-CSharp
+        m_MethodName: GiveManaOnKilled
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

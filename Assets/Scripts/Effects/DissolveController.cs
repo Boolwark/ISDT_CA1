@@ -6,7 +6,7 @@ public class DissolveController : MonoBehaviour
 {
     private bool isVisible = false;
     public float dissolveSpeed = 0.5f; // Speed of the dissolve effect
-    public Renderer renderer;
+    private Renderer renderer;
     private bool isDissolving = false;
     private float dissolveValue;
     public float minDissolve = -2f;
@@ -14,24 +14,13 @@ public class DissolveController : MonoBehaviour
     public UnityEvent OnFadeOutEnd;
     public UnityEvent OnFadeInEnd;
 
-
-    void Start()
-    {
-        dissolveValue = minDissolve;
-        if (renderer==null)
-        {
-            renderer = GetComponent<Renderer>();
-        }
-        // Get the material of the GameObject this script is attached to
-        //dissolveMaterial = GetComponent<Renderer>().material;
-
     
-        //dissolveMaterial.SetFloat("_Dissolve", dissolveValue);
-    }
 
-    public void SetDissolveMaterial(Material material,bool startFromMax)
+
+    public void SetDissolveMaterial(Material material,bool startFromMax,MeshRenderer renderer)
     {
-        this.renderer.material = material;
+        this.renderer = renderer;
+        renderer.material = material;
         dissolveValue = startFromMax ? maxDissolve : minDissolve;
         material.SetFloat("_Dissolve", dissolveValue);
     }

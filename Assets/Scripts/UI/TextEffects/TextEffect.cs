@@ -38,7 +38,7 @@ namespace UI.TextEffects
                     {
                         case(Effects.WOBBLY):
                             verts[charInfo.vertexIndex + j] =
-                                orig + new Vector3(0, Mathf.Sin(Time.time * 2f + orig.x * 0.01f) * 10f, 0);
+                                orig + new Vector3(0, Mathf.Sin(Time.time * 2f + orig.x * 0.01f) * 10f, 0)*shakeScale;
                             break;
                         case(Effects.SHAKING):
                             verts[charInfo.vertexIndex + j] =

@@ -5,6 +5,8 @@ using DG.Tweening;
 using Dragon;
 using Stats;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
+using Util;
 using Random = UnityEngine.Random;
 
 public class DragonController : MonoBehaviour
@@ -201,7 +203,7 @@ public class DragonController : MonoBehaviour
               
 
          
-            transform.Translate(directionToPlayer * dragonConfig.movementSpeed*Time.deltaTime);
+            transform.Translate(transform.forward * dragonConfig.movementSpeed*Time.deltaTime);
         }
 
         currentState = DragonState.Attack;
@@ -214,7 +216,7 @@ public class DragonController : MonoBehaviour
         fireBreathEffect.Play();
         if (player.TryGetComponent(out StatsManager sm))
         {
-            sm.TakeDamage(dragonConfig.shootingDamage);
+            sm.TakeDamage(dragonConfig.shootingDamage * Time.deltaTime);
         }
         AttackPlayer();
     }
@@ -224,7 +226,7 @@ public class DragonController : MonoBehaviour
         anim.SetBool(Bite, true);
         if (player.TryGetComponent(out StatsManager sm))
         {
-            sm.TakeDamage(dragonConfig.meleeDamage);
+            sm.TakeDamage(dragonConfig.meleeDamage* Time.deltaTime);
         }
         // one in ten chance to transition to drakraris
         if (Random.Range(0, 10) == 4)
@@ -238,8 +240,10 @@ public class DragonController : MonoBehaviour
     {
         Debug.Log("Playing Death Anim");
         currentState = DragonState.Die;
+        LevelManager.Instance.ChangeSceneDirect("WinScene");
+        ExportToCSV.Instance.Record();
     }
-
-        }
+    
+}
     
 

@@ -15,7 +15,7 @@ namespace Util
             {
                 renderer.material = dissolveMaterial;
                 controller.dissolveSpeed = dissolveSpeed;
-                controller.SetDissolveMaterial(dissolveMaterial,true);
+                controller.SetDissolveMaterial(dissolveMaterial,true,renderer);
                 controller.ReverseDissolving();
             }
             else
